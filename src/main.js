@@ -11,9 +11,9 @@ import Framework7Vue from 'framework7-vue'
 import Framework7Theme from 'framework7/dist/css/framework7.ios.min.css'
 import Framework7ThemeColors from 'framework7/dist/css/framework7.ios.colors.min.css'
 /* OR for Material Theme:
-import Framework7Theme from 'framework7/dist/css/framework7.material.min.css'
-import Framework7ThemeColors from 'framework7/dist/css/framework7.material.colors.min.css'
-*/
+ import Framework7Theme from 'framework7/dist/css/framework7.material.min.css'
+ import Framework7ThemeColors from 'framework7/dist/css/framework7.material.colors.min.css'
+ */
 
 // Import App Custom Styles
 import AppStyles from './css/app.css'
@@ -24,22 +24,37 @@ import Routes from './routes.js'
 // Import App Component
 import App from './app'
 
+import * as VueGoogleMaps from 'vue2-google-maps'
+
+var googleMapsClient = require('@google/maps').createClient({
+    key: 'AIzaSyDksjLp8Pg0V2pGLKY5N6JIG4JrjwLaGYw'
+});
+
 // Init F7 Vue Plugin
-Vue.use(Framework7Vue)
+Vue.use(Framework7Vue);
+Vue.use(VueGoogleMaps, {
+    load: {
+        key: 'AIzaSyDksjLp8Pg0V2pGLKY5N6JIG4JrjwLaGYw',
+        libraries: 'places', // This is required if you use the Autocomplete plugin
+        // OR: libraries: 'places,drawing'
+        // OR: libraries: 'places,drawing,visualization'
+        // (as you require)
+    },
+});
 
 // Init App
-new Vue({
-  el: '#app',
-  template: '<app/>',
-  // Init Framework7 by passing parameters here
-  framework7: {
-    root: '#app',
-    /* Uncomment to enable Material theme: */
-    // material: true,
-    routes: Routes,
-  },
-  // Register App Component
-  components: {
-    app: App
-  }
+window.app = new Vue({
+    el: '#app',
+    template: '<app/>',
+    // Init Framework7 by passing parameters here
+    framework7: {
+        root: '#app',
+        /* Uncomment to enable Material theme: */
+        // material: true,
+        routes: Routes,
+    },
+    // Register App Component
+    components: {
+        app: App
+    }
 });

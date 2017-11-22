@@ -1,3 +1,208 @@
-/* =========
-Your custom styles go here
- ========= */
+@import "font-awesome-4.7.0/css/font-awesome.min.css";
+
+@font-face {
+    font-family: HelveticaNeue;
+    src: url('../css/fonts/HelveticaNeue/HelveticaNeue.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: HelveticaNeue;
+    src: url('/static/fonts/HelveticaNeue/HelveticaNeueBd.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: HelveticaNeueBC;
+    src: url('/static/fonts/HelveticaNeue/HelveticaNeue BlackCond.ttf');
+}
+
+
+@font-face {
+    font-family: HelveticaNeue2;
+    src: url('../css/fonts/HelveticaNeue/HelveticaNeueLt.ttf');
+    font-weight: normal;
+}
+
+body{
+    font-family: Helvetica Neue, Helvetica, Arial;
+    /*min-height: 600px;*/
+}
+
+.navbar{
+    line-height:09.49820788530466%;
+    height: 09.49820788530466%;
+}
+
+.navbar-inner{
+    background-color: #CCF600;
+}
+
+.navbar .center {
+    letter-spacing: 1px;
+    font-size: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    color: #010101;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0) url("/static/logo_menu.png") no-repeat;
+    background-size: contain;
+}
+
+#get-button{
+    width: 89.6%;
+    /*background-color: #CCF600;*/
+    border: none;
+    border-radius: 0;
+    /*color: #ccf600;*/
+    font-family: HelveticaNeueBC;
+    color: black;
+    line-height:3.25rem;
+    height: 10.419%;
+    font-size: 1.8125rem;
+    position: fixed;
+    bottom: 36px;
+    left: 05.33333333333333%;
+    /*word-spacing: 0;*/
+    /*font-weight: 100;*/
+    background: rgba(0,0,0,0) url("/static/get-button.png") no-repeat;
+    background-size: cover;
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+}
+
+#to-location-btn{
+    background-color: white;
+    position: absolute;
+    z-index: 9;
+    right: 5.28511822%;
+    bottom: 21.32616487455197%;
+}
+
+#to-location-btn i{
+    color: black;
+    font-size: 2rem;
+}
+
+
+#search-box {
+    height: 08.24372759856631%;
+    position: absolute;
+    top: 12.36559139784946%;
+    z-index: 9;
+    width: 89.6%;
+    left: 05.33333333333333%;
+}
+
+#search-box input{
+    font-family: HelveticaNeue2;
+    font-size: 1.625rem;
+    width: 87.2% !important;
+}
+
+#search-box .item-inner, #search-box .item-input, #search-box input{
+    /*width: 100%;*/
+    height: 100%;
+    border: none;
+}
+
+
+.shadow {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: HelveticaNeue;
+}
+
+
+
+#search-box #dot {
+    float: left;
+    width: 12.8%;
+    color: #CCF600;
+    font-size: 0.875rem;
+    height: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+#search-box #dot i{
+    line-height: 2.752688rem;
+}
+
+#search-box input {
+    padding: 0;
+    color: #525760;
+    display: inline-block;
+    width: 65%;
+    overflow-y: hidden;
+}
+
+#searchBox #text p {
+    font-family: HelveticaNeue2;
+    text-align: left;
+    font-size: 42px;
+}
+
+#searchBox #icon {
+    float: right;
+    width: 16.93333333333333%;
+    line-height: 3.2rem;
+    font-size: 2rem;
+    color: #CACACA;
+}
+
+#currentLocationButton {
+    position: fixed;
+    right: 5.28511822%;
+    bottom: 238px;
+    background-color: white;
+    border-radius: 100%;
+    height: 100px;
+    width: 13.33333333333333%;
+    line-height: 100px;
+    text-align: center;
+    font-size: 50px;
+}
+
+#marker {
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0) url("/images/marker.png") no-repeat;
+    background-size: contain;
+    width: 12%;
+    height: 9rem;
+    position: fixed;
+    left: 49%;
+    top: 48%;
+    margin-left: -1rem;
+    margin-top: -2rem;
+    z-index: 9;
+}
+
+.navbar .left{
+    margin-left: 2.28511822%;
+    width: 6.4%;
+    height: 100%;
+}
+
+#menu-button {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0) url("/static/menu_icon.png") no-repeat center;
+    background-size: contain;
+}
