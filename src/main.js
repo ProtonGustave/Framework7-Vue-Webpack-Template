@@ -30,6 +30,8 @@ var googleMapsClient = require('@google/maps').createClient({
     key: 'AIzaSyDksjLp8Pg0V2pGLKY5N6JIG4JrjwLaGYw'
 });
 
+window.googleMapsClient = googleMapsClient;
+
 // Init F7 Vue Plugin
 Vue.use(Framework7Vue);
 Vue.use(VueGoogleMaps, {
@@ -41,6 +43,8 @@ Vue.use(VueGoogleMaps, {
         // (as you require)
     },
 });
+
+window.Vue = Vue;
 
 // Init App
 window.app = new Vue({

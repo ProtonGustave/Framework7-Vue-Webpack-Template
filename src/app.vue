@@ -51,7 +51,7 @@
                         <div class="item-content shadow" id="search-box">
                             <div class="item-inner">
                                 <div class="item-input">
-                                    <span  id="dot"><i class="fa fa-circle"></i></span>
+                                    <span id="dot"><i class="fa fa-circle"></i></span>
                                     <input type="text" placeholder="Where to ?">
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                         <div id="map">
                             <gmap-map
                                     :center="center"
-                                    :zoom="10"
+                                    :zoom="17"
                                     style="width: 100%; height: 100%"
                                     :options="{disableDefaultUI: true}"
                                     ref="example"
@@ -188,14 +188,26 @@
                 this.$data.center.lat = newCenter.lat();
                 this.$data.center.lng = newCenter.lng();
                 this.$data.markers = [];
-                this.generateDeelersAround(this.$data.center);
+                googleMapsClient.geocode({
+                    location: this.$data.center,
+                }, async function (addresses, status) {
+                    console.log(arguments);
+                    if (addresses && addresses[0] && addresses[0].formatted_address) {
+                        // createDeliveries(addresses);
+                        // createDeliveries(generateDeelersAddresses(15,await getUserPosition()));
+//                        $('#searchBox #text p').html(addresses[0].formatted_address);
+                    }
+                });
+
+
+//                _.debounce(this.generateDeelersAround(this.$data.center), 100);
             },
         },
         data: function () {
             return {
-                center: {lat: 10.0, lng: 10.0},
+                center: {lat: -34.397, lng: 150.644},
                 userMarker: {
-                    position: {lat: 10.0, lng: 10.0},
+                    position: {lat: -34.397, lng: 150.644},
                     icon: {
                         url: '/static/user_position_marker.png',
                         size: {width: 468, height: 468},
@@ -204,11 +216,7 @@
                         anchor: {x: 117, y: 117}
                     },
                 },
-                markers: [{
-                    position: {lat: 10.0, lng: 10.0},
-                }, {
-                    position: {lat: 11.0, lng: 11.0}
-                }],
+                markers: [],
                 image: {
                     url: '/static/dealers_marker.png',
                     size: {width: 321, height: 321},

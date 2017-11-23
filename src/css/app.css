@@ -26,6 +26,7 @@
 body {
     font-family: Helvetica Neue, Helvetica, Arial;
     /*min-height: 600px;*/
+    position: absolute;
 }
 
 .navbar {
@@ -89,9 +90,11 @@ body {
 }
 
 #search-box input {
-    font-family: HelveticaNeue2;
-    font-size: 1.625rem;
+    color: #525760;
+    font-size: 1.1rem;
     width: 85% !important;
+    font-family: HelveticaNeue2;
+    text-align: left;
 }
 
 #search-box .item-inner, #search-box .item-input, #search-box input {
@@ -121,14 +124,16 @@ body {
     float: left;
     width: 15%;
     color: #CCF600;
-    font-size: 0.875rem;
+
     height: 100%;
+    /*line-height: 1.875rem;*/
     text-align: center;
     background-color: white;
 }
 
 #search-box #dot i {
-    line-height: 2.752688rem;
+    line-height: 3.952688rem;
+    font-size: 0.575rem;
 }
 
 #search-box input {
