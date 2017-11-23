@@ -46,6 +46,9 @@ Vue.use(VueGoogleMaps, {
 window.app = new Vue({
     el: '#app',
     template: '<app/>',
+    mounted:function () {
+        console.log('created', this.$children[0].toLocation());
+    },
     // Init Framework7 by passing parameters here
     framework7: {
         root: '#app',
@@ -58,3 +61,4 @@ window.app = new Vue({
         app: App
     }
 });
+
