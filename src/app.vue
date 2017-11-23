@@ -37,8 +37,8 @@
             <f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
                 <!-- iOS Theme Navbar -->
                 <f7-navbar v-if="$theme.ios">
-                    <f7-nav-left>
-                        <div id="menu-button" class="open-panel"></div>
+                    <f7-nav-left class="open-panel">
+                        <div id="menu-button" class="invisible"></div>
                     </f7-nav-left>
                     <f7-nav-center sliding></f7-nav-center>
                     <f7-nav-right>
@@ -52,7 +52,7 @@
                             <div class="item-inner">
                                 <div class="item-input">
                                     <span  id="dot"><i class="fa fa-circle"></i></span>
-                                    <input type="text" placeholder="Your name">
+                                    <input type="text" placeholder="Where to ?">
                                 </div>
                             </div>
                         </div>
@@ -77,7 +77,6 @@
                             </gmap-map>
                         </div>
                         <f7-fab id="to-location-btn" class="shadow" @click="toLocation">
-                            <i class="fa fa-crosshairs"></i>
                         </f7-fab>
                         <f7-button id="get-button" class="shadow"></f7-button>
                     </f7-page>

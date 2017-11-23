@@ -17,81 +17,70 @@
     src: url('/static/fonts/HelveticaNeue/HelveticaNeue BlackCond.ttf');
 }
 
-
 @font-face {
     font-family: HelveticaNeue2;
     src: url('../css/fonts/HelveticaNeue/HelveticaNeueLt.ttf');
     font-weight: normal;
 }
 
-body{
+body {
     font-family: Helvetica Neue, Helvetica, Arial;
     /*min-height: 600px;*/
 }
 
-.navbar{
-    line-height:09.49820788530466%;
-    height: 09.49820788530466%;
+.navbar {
+    height: 09.498207885%;
 }
 
-.navbar-inner{
-    background-color: #CCF600;
-}
-
-.navbar .center {
-    letter-spacing: 1px;
-    font-size: 2rem;
-    margin: 0 auto;
-    text-align: center;
-    font-weight: bold;
-    color: #010101;
+.navbar {
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0) url("/static/logo_menu.png") no-repeat;
+    background: rgba(0, 0, 0, 0) url("/static/header2.png") no-repeat center center;
     background-size: contain;
 }
 
-#get-button{
+#get-button {
     width: 89.6%;
-    /*background-color: #CCF600;*/
     border: none;
     border-radius: 0;
-    /*color: #ccf600;*/
-    font-family: HelveticaNeueBC;
     color: black;
-    line-height:3.25rem;
+    line-height: 3.25rem;
     height: 10.419%;
     font-size: 1.8125rem;
     position: fixed;
-    bottom: 36px;
+    bottom: 03.225806451%;
     left: 05.33333333333333%;
-    /*word-spacing: 0;*/
-    /*font-weight: 100;*/
-    background: rgba(0,0,0,0) url("/static/get-button.png") no-repeat;
+    background: rgba(0, 0, 0, 0) url("/static/get-button.png") no-repeat;
     background-size: cover;
 }
 
-#map{
+#map {
     width: 100%;
     height: 100%;
 }
 
-#to-location-btn{
-    background-color: white;
-    position: absolute;
-    z-index: 9;
+#to-location-btn {
+    position: fixed;
     right: 5.28511822%;
-    bottom: 21.32616487455197%;
+    bottom: 21.326164874%;
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 95px;
+    background: rgba(0, 0, 0, 0) url("/static/Location.png");
+    background-size: contain;
 }
 
-#to-location-btn i{
+#to-location-btn i {
     color: black;
     font-size: 2rem;
 }
 
+.invisible {
+    visibility: hidden !important;
+}
 
 #search-box {
-    height: 08.24372759856631%;
+    height: 10.394265233%;
     position: absolute;
     top: 12.36559139784946%;
     z-index: 9;
@@ -99,18 +88,17 @@ body{
     left: 05.33333333333333%;
 }
 
-#search-box input{
+#search-box input {
     font-family: HelveticaNeue2;
     font-size: 1.625rem;
-    width: 87.2% !important;
+    width: 85% !important;
 }
 
-#search-box .item-inner, #search-box .item-input, #search-box input{
+#search-box .item-inner, #search-box .item-input, #search-box input {
     /*width: 100%;*/
     height: 100%;
     border: none;
 }
-
 
 .shadow {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
@@ -129,11 +117,9 @@ body {
     font-family: HelveticaNeue;
 }
 
-
-
 #search-box #dot {
     float: left;
-    width: 12.8%;
+    width: 15%;
     color: #CCF600;
     font-size: 0.875rem;
     height: 100%;
@@ -141,7 +127,7 @@ body {
     background-color: white;
 }
 
-#search-box #dot i{
+#search-box #dot i {
     line-height: 2.752688rem;
 }
 
@@ -194,7 +180,7 @@ body {
     z-index: 9;
 }
 
-.navbar .left{
+.navbar .left {
     margin-left: 2.28511822%;
     width: 6.4%;
     height: 100%;
