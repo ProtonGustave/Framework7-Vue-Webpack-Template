@@ -52,7 +52,7 @@
                             <div class="item-inner">
                                 <div class="item-input">
                                     <span id="dot"><i class="fa fa-circle"></i></span>
-                                    <input type="text" placeholder="Where to ?">
+                                    <input type="text" placeholder="Where to ?" v-model="address">
                                 </div>
                             </div>
                         </div>
@@ -134,8 +134,13 @@
 
 <script>
     import _ from 'lodash';
+    import Axios from 'axios'
 
     export default {
+        created: function () {
+            this.generateDeelersAround(this.$data.center);
+            _.defer(this.toLocation);
+        },
         methods: {
             toLocation: function () {
                 try {
@@ -158,6 +163,7 @@
                             };
                             resolve(pos);
                         }, function () {
+
                             console.error(arguments);
                             //handleLocationError(true, infoWindow, map.getCenter());
                         });
@@ -169,7 +175,7 @@
                 });
             },
             generateDeelersAround: async function (position) {
-                this.$data.markers = this.$data.markers.concat(this.generateDeelersAddresses(15, position));
+                this.$data.markers = this.$data.markers.concat(this.generateDeelersAddresses(15, this.$data.center));
             },
             generateDeelersAddresses: function (number, nearby) {
                 let res = [];
@@ -184,28 +190,24 @@
 
                 return res;
             },
-            updateCenter: function (newCenter) {
+            updateCenter: _.debounce(async function (newCenter) {
                 this.$data.center.lat = newCenter.lat();
                 this.$data.center.lng = newCenter.lng();
                 this.$data.markers = [];
-                googleMapsClient.geocode({
-                    location: this.$data.center,
-                }, async function (addresses, status) {
-                    console.log(arguments);
-                    if (addresses && addresses[0] && addresses[0].formatted_address) {
-                        // createDeliveries(addresses);
-                        // createDeliveries(generateDeelersAddresses(15,await getUserPosition()));
-//                        $('#searchBox #text p').html(addresses[0].formatted_address);
+                let addresses = await Axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
+                    params: {
+                        key: 'AIzaSyDksjLp8Pg0V2pGLKY5N6JIG4JrjwLaGYw',
+                        latlng: newCenter.lat() + ',' + newCenter.lng()
                     }
                 });
-
-
-//                _.debounce(this.generateDeelersAround(this.$data.center), 100);
-            },
+                this.generateDeelersAround(newCenter);
+                this.$data.address = _.at(addresses, 'data.results[0].formatted_address');
+            }, 500),
         },
         data: function () {
             return {
                 center: {lat: -34.397, lng: 150.644},
+                address: 'Where to ?',
                 userMarker: {
                     position: {lat: -34.397, lng: 150.644},
                     icon: {

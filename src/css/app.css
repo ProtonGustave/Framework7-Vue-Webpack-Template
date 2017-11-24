@@ -23,12 +23,6 @@
     font-weight: normal;
 }
 
-body {
-    font-family: Helvetica Neue, Helvetica, Arial;
-    /*min-height: 600px;*/
-    position: absolute;
-}
-
 .navbar {
     height: 09.498207885%;
 }
@@ -92,7 +86,7 @@ body {
 #search-box input {
     color: #525760;
     font-size: 1.1rem;
-    width: 85% !important;
+    width: 80% !important;
     font-family: HelveticaNeue2;
     text-align: left;
 }
@@ -113,7 +107,6 @@ body {
 }
 
 body {
-    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -137,7 +130,7 @@ body {
 }
 
 #search-box input {
-    padding: 0;
+    padding: 0 5% 0 0;
     color: #525760;
     display: inline-block;
     width: 65%;

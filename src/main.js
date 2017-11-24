@@ -23,6 +23,7 @@ import Routes from './routes.js'
 
 // Import App Component
 import App from './app'
+import Axios from 'axios'
 
 import * as VueGoogleMaps from 'vue2-google-maps'
 
@@ -31,13 +32,15 @@ var googleMapsClient = require('@google/maps').createClient({
 });
 
 window.googleMapsClient = googleMapsClient;
+window.VueGoogleMaps = VueGoogleMaps;
+window.Axios = Axios;
 
 // Init F7 Vue Plugin
 Vue.use(Framework7Vue);
 Vue.use(VueGoogleMaps, {
     load: {
         key: 'AIzaSyDksjLp8Pg0V2pGLKY5N6JIG4JrjwLaGYw',
-        libraries: 'places', // This is required if you use the Autocomplete plugin
+        libraries: 'places, geocode', // This is required if you use the Autocomplete plugin
         // OR: libraries: 'places,drawing'
         // OR: libraries: 'places,drawing,visualization'
         // (as you require)
@@ -50,9 +53,6 @@ window.Vue = Vue;
 window.app = new Vue({
     el: '#app',
     template: '<app/>',
-    mounted:function () {
-        console.log('created', this.$children[0].toLocation());
-    },
     // Init Framework7 by passing parameters here
     framework7: {
         root: '#app',
@@ -65,4 +65,3 @@ window.app = new Vue({
         app: App
     }
 });
-
