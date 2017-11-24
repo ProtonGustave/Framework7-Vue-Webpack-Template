@@ -36,7 +36,7 @@
         <f7-views>
             <f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
                 <!-- iOS Theme Navbar -->
-                <f7-navbar v-if="$theme.ios">
+                <f7-navbar v-if="$theme.ios" id="header">
                     <f7-nav-left class="open-panel">
                         <div id="menu-button" class="invisible"></div>
                     </f7-nav-left>
@@ -48,9 +48,9 @@
                 <!-- Pages -->
                 <f7-pages>
                     <f7-page>
-                        <div class="item-content shadow" id="search-box">
+                        <div class="item-content shadow">
                             <div class="item-inner">
-                                <div class="item-input">
+                                <div class="item-input" id="search-box">
                                     <span id="dot"><i class="fa fa-circle"></i></span>
                                     <input type="text" placeholder="Where to ?" v-model="address">
                                 </div>
@@ -78,7 +78,15 @@
                         </div>
                         <f7-fab id="to-location-btn" class="shadow" @click="toLocation">
                         </f7-fab>
-                        <f7-button id="get-button" class="shadow"></f7-button>
+                        <div id="delivery">
+                            <div id="estimate"></div>
+                            <div id="time"><span>
+                                <p id="timeVal">20</p>
+                                <p id="timeUnit">min</p>
+                            </span></div>
+                            <p>delivery</p>
+                        </div>
+                        <f7-button id="get-button" class="shadow" @click="getVisible = true"></f7-button>
                     </f7-page>
                 </f7-pages>
             </f7-view>
@@ -128,7 +136,10 @@
                 </f7-pages>
             </f7-view>
         </f7-login-screen>
-
+        <f7-popup :opened="getVisible">
+            <p>Popup content goes here </p><!-- -->
+            <a @click="getVisible = false">Close</a><!-- -->
+        </f7-popup>
     </div>
 </template>
 
@@ -208,6 +219,7 @@
             return {
                 center: {lat: -34.397, lng: 150.644},
                 address: 'Where to ?',
+                getVisible: false,
                 userMarker: {
                     position: {lat: -34.397, lng: 150.644},
                     icon: {
