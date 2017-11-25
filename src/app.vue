@@ -49,7 +49,7 @@
                 <f7-pages>
                     <f7-page>
                         <div class="item-content shadow">
-                            <div class="item-inner">
+                            <div class="item-inner search-box-container">
                                 <div class="item-input" id="search-box">
                                     <span id="dot"><i class="fa fa-circle"></i></span>
                                     <input type="text" placeholder="Where to ?" v-model="address">
@@ -86,7 +86,9 @@
                             </span></div>
                             <p>delivery</p>
                         </div>
-                        <f7-button id="get-button" class="shadow" @click="getVisible = true"></f7-button>
+                        <div id="get-button">
+                            <f7-button class="shadow content" @click="getVisible = true"></f7-button>
+                        </div>
                     </f7-page>
                 </f7-pages>
             </f7-view>
