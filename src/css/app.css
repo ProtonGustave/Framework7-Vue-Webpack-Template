@@ -37,7 +37,7 @@ body {
     width: 18vw;
     height: 19vw;
     z-index: 9;
-
+    pointer-events: none;
 }
 
 .navbar {
@@ -115,6 +115,7 @@ body {
     /*width: 100%;*/
     height: 100%;
     border: none;
+    border-radius: 0;
 }
 
 .shadow {
