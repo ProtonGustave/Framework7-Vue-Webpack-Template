@@ -48,8 +48,8 @@
                 <!-- Pages -->
                 <f7-pages>
                     <f7-page>
-                        <div class="item-content shadow">
-                            <div class="item-inner search-box-container">
+                        <div class="item-content">
+                            <div class="item-inner search-box-container shadow">
                                 <div class="item-input" id="search-box">
                                     <span id="dot"><i class="fa fa-circle"></i></span>
                                     <input type="text" placeholder="Where to ?" v-model="address">
@@ -76,10 +76,11 @@
 
                             </gmap-map>
                         </div>
+                        <div id="pin"></div>
                         <f7-fab id="to-location-btn" class="shadow" @click="toLocation">
                         </f7-fab>
                         <div id="delivery">
-                            <div id="estimate">
+                            <div id="estimate"  class="shadow">
                                 <div id="time"><span>
                                 <p id="timeVal">20</p>
                                 <p id="timeUnit">min</p>
@@ -193,7 +194,7 @@
             },
             generateDeelersAddresses: function (number, nearby) {
                 let res = [];
-                let distance = 0.005;
+                let distance = 0.003;
 
                 for (let i = 0; i < number; i++) {
                     let address = {position: {}};

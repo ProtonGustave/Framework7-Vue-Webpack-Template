@@ -28,6 +28,18 @@ body {
     position: absolute;
 }
 
+#pin {
+    position: absolute;
+    top: 46%;
+    left: 45%;
+    background: rgba(0, 0, 0, 0) url('/static/marker2.png') no-repeat center center;
+    background-size: contain;
+    width: 18vw;
+    height: 19vw;
+    z-index: 9;
+
+}
+
 .navbar {
     width: 100%;
     height: 14.133333333vw;
@@ -93,7 +105,7 @@ body {
 #search-box input {
     color: #525760;
     line-height: 15.466666666vw;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     width: 80% !important;
     font-family: HelveticaNeue2;
     text-align: left;
@@ -290,7 +302,7 @@ body {
     margin: 0 0.6875rem;
     display: inline-block;
     font-weight: bold;
-    line-height: 07.333333333vw;
+    line-height: 06.833333333vw;
 }
 
 #estimate #time {
