@@ -57,24 +57,26 @@
                             </div>
                         </div>
                         <div id="map">
-                            <gmap-map
-                                    :center="center"
+                            <googlemaps-map
+                                    :center.sync="center"
                                     :zoom="17"
                                     style="width: 100%; height: 100%"
                                     :options="{disableDefaultUI: true}"
-                                    ref="example"
+                                    ref="map"
+                                    @idle="onIdle"
                                     @center_changed="updateCenter"
                             >
-                                <gmap-marker :position="userMarker.position"
+                                <googlemaps-user-position :position="userMarker.position"
                                              :icon="userMarker.icon"
+                                             :radius="1"
                                              :key="1">
-                                </gmap-marker>
-                                <gmap-marker v-for="(marker, index) in markers" :position="marker.position"
+                                </googlemaps-user-position>
+                                <googlemaps-marker v-for="(marker, index) in markers" :position="marker.position"
                                              :icon="marker.icon"
                                              :key="index">
-                                </gmap-marker>
+                                </googlemaps-marker>
 
-                            </gmap-map>
+                            </googlemaps-map>
                         </div>
                         <div id="pin"></div>
                         <f7-fab id="to-location-btn" class="shadow" @click="toLocation">
@@ -152,21 +154,14 @@
     import Axios from 'axios'
 
     export default {
-        created: function () {
+        created: async function () {
             this.generateDeelersAround(this.$data.center);
+            this.$data.userMarker.position = await this.getUserPosition();
             _.defer(this.toLocation);
         },
         methods: {
-            toLocation: function () {
-                try {
-                    this.getUserPosition().then((position) => {
-                        this.$refs.example.panTo(position);
-                        this.$data.userMarker.position.lat = position.lat;
-                        this.$data.userMarker.position.lng = position.lng;
-                    });
-                } catch (err) {
-                    alert('Browser doesn\'t support Geolocation');
-                }
+            toLocation: async function () {
+                this.$refs.map.panTo(this.$data.userMarker.position);
             },
             getUserPosition: function () {
                 return new Promise((resolve, reject) => {
@@ -189,6 +184,10 @@
                     }
                 });
             },
+            onIdle: function (component) {
+                this.updateCenter(component.$_map.center);
+                console.log({lat: component.$_map.center.lat(), lng:component.$_map.center.lng()})
+            },
             generateDeelersAround: async function (position) {
                 this.$data.markers = this.$data.markers.concat(this.generateDeelersAddresses(15, position));
             },
@@ -208,8 +207,6 @@
             },
             updateCenter: _.debounce(async function (newCenter) {
                 console.log('debounced function', arguments);
-//                this.$data.center.lat = newCenter.lat();
-//                this.$data.center.lng = newCenter.lng();
                 this.$data.markers = [];
                 let addresses = await Axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
                     params: {
@@ -219,7 +216,7 @@
                 });
                 this.generateDeelersAround({lat: newCenter.lat(), lng: newCenter.lng()});
                 this.$data.address = _.at(addresses, 'data.results[0].formatted_address');
-            }, 500),
+            }, 0),
         },
         data: function () {
             return {

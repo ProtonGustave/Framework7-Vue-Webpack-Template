@@ -25,14 +25,6 @@ import Routes from './routes.js'
 import App from './app'
 import Axios from 'axios'
 
-import * as VueGoogleMaps from 'vue2-google-maps'
-
-var googleMapsClient = require('@google/maps').createClient({
-    key: 'AIzaSyDksjLp8Pg0V2pGLKY5N6JIG4JrjwLaGYw'
-});
-
-window.googleMapsClient = googleMapsClient;
-window.VueGoogleMaps = VueGoogleMaps;
 window.Axios = Axios;
 
 window.getMinScale = function getMinScale(number) {
@@ -44,16 +36,18 @@ window.getMinScale = function getMinScale(number) {
 
 // Init F7 Vue Plugin
 Vue.use(Framework7Vue);
+
+import 'vue-googlemaps/dist/vue-googlemaps.css'
+import VueGoogleMaps from 'vue-googlemaps'
+
+window.VueGoogleMaps = VueGoogleMaps;
+
 Vue.use(VueGoogleMaps, {
     load: {
-        key: 'AIzaSyDksjLp8Pg0V2pGLKY5N6JIG4JrjwLaGYw',
-        libraries: 'places, geocode', // This is required if you use the Autocomplete plugin
-        // OR: libraries: 'places,drawing'
-        // OR: libraries: 'places,drawing,visualization'
-        // (as you require)
+        apiKey: 'AIzaSyDksjLp8Pg0V2pGLKY5N6JIG4JrjwLaGYw',
+        libraries: ['places'],
     },
-});
-
+})
 window.Vue = Vue;
 
 // Init App
