@@ -272,7 +272,7 @@ body {
 #estimate #time p {
     color: white;
     display: block;
-    line-height: 02.933333333vw;
+    line-height: 02.833333333vw;
     margin: 0;
     padding: 0.2rem;
 }
@@ -301,7 +301,7 @@ body {
     margin: 0 0.6875rem;
     display: inline-block;
     font-weight: bold;
-    line-height: 06.833333333vw;
+    line-height: 07.833333333vw;
 }
 
 #estimate #time {
