@@ -64,16 +64,19 @@
                                     :options="{disableDefaultUI: true}"
                                     ref="map"
                                     @idle="onIdle"
-                                    @center_changed="updateCenter"
                             >
-                                <googlemaps-user-position :position="userMarker.position"
-                                             :icon="userMarker.icon"
-                                             :radius="1"
-                                             :key="1">
-                                </googlemaps-user-position>
+                                <!--<googlemaps-user-position :position="userMarker.position"-->
+                                                          <!--:icon="userMarker.icon"-->
+                                                          <!--:radius="1"-->
+                                                          <!--:key="1">-->
+                                <!--</googlemaps-user-position>-->
+                                <googlemaps-marker :position="userMarker.position"
+                                                   :icon="userMarker.icon"
+                                                   :key="1">
+                                </googlemaps-marker>
                                 <googlemaps-marker v-for="(marker, index) in markers" :position="marker.position"
-                                             :icon="marker.icon"
-                                             :key="index">
+                                                   :icon="marker.icon"
+                                                   :key="index">
                                 </googlemaps-marker>
 
                             </googlemaps-map>
@@ -82,7 +85,7 @@
                         <f7-fab id="to-location-btn" class="shadow" @click="toLocation">
                         </f7-fab>
                         <div id="delivery">
-                            <div id="estimate"  class="shadow">
+                            <div id="estimate" class="shadow">
                                 <div id="time"><span>
                                 <p id="timeVal">20</p>
                                 <p id="timeUnit">min</p>
@@ -91,7 +94,7 @@
                             </div>
                         </div>
                         <div>
-                            <f7-button  id="get-button" class="shadow" @click="getVisible = true"></f7-button>
+                            <f7-button id="get-button" class="shadow" @click="getVisible = true"></f7-button>
                         </div>
                     </f7-page>
                 </f7-pages>
@@ -157,10 +160,11 @@
         created: async function () {
             this.generateDeelersAround(this.$data.center);
             this.$data.userMarker.position = await this.getUserPosition();
-            _.defer(this.toLocation);
+            this.$data.center = this.$data.userMarker.position;
         },
         methods: {
             toLocation: async function () {
+                console.log(this.$data.userMarker.position.lat, this.$data.userMarker.position.lng);
                 this.$refs.map.panTo(this.$data.userMarker.position);
             },
             getUserPosition: function () {
@@ -186,7 +190,6 @@
             },
             onIdle: function (component) {
                 this.updateCenter(component.$_map.center);
-                console.log({lat: component.$_map.center.lat(), lng:component.$_map.center.lng()})
             },
             generateDeelersAround: async function (position) {
                 this.$data.markers = this.$data.markers.concat(this.generateDeelersAddresses(15, position));
@@ -206,7 +209,6 @@
                 return res;
             },
             updateCenter: _.debounce(async function (newCenter) {
-                console.log('debounced function', arguments);
                 this.$data.markers = [];
                 let addresses = await Axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
                     params: {
