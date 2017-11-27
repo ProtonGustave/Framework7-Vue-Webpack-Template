@@ -30,8 +30,10 @@ body {
 
 #pin {
     position: absolute;
-    top: 45vh;
-    left: 45vw;
+    top: 50vh;
+    left: 50vw;
+    margin-top: -2rem;
+    margin-left: -1rem;
     background: rgba(0, 0, 0, 0) url('/static/marker2.png') no-repeat center center;
     background-size: contain;
     width: 18vw;
