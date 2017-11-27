@@ -35,6 +35,13 @@ window.googleMapsClient = googleMapsClient;
 window.VueGoogleMaps = VueGoogleMaps;
 window.Axios = Axios;
 
+window.getMinScale = function getMinScale(number) {
+    let res = (number.toString().match(/\.[0-9]*/))[0];
+    res = res.replace('.', '');
+    console.log('getMinScale', res.length);
+    return (1 / Math.pow(10, res.length - 1)).toFixed(res.length - 1);
+}
+
 // Init F7 Vue Plugin
 Vue.use(Framework7Vue);
 Vue.use(VueGoogleMaps, {

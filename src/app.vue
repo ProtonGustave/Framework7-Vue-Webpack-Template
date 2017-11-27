@@ -79,15 +79,16 @@
                         <f7-fab id="to-location-btn" class="shadow" @click="toLocation">
                         </f7-fab>
                         <div id="delivery">
-                            <div id="estimate"></div>
-                            <div id="time"><span>
+                            <div id="estimate">
+                                <div id="time"><span>
                                 <p id="timeVal">20</p>
                                 <p id="timeUnit">min</p>
                             </span></div>
-                            <p>delivery</p>
+                                <p>delivery</p>
+                            </div>
                         </div>
-                        <div id="get-button">
-                            <f7-button class="shadow content" @click="getVisible = true"></f7-button>
+                        <div>
+                            <f7-button  id="get-button" class="shadow" @click="getVisible = true"></f7-button>
                         </div>
                     </f7-page>
                 </f7-pages>
@@ -188,11 +189,12 @@
                 });
             },
             generateDeelersAround: async function (position) {
-                this.$data.markers = this.$data.markers.concat(this.generateDeelersAddresses(15, this.$data.center));
+                this.$data.markers = this.$data.markers.concat(this.generateDeelersAddresses(15, position));
             },
             generateDeelersAddresses: function (number, nearby) {
                 let res = [];
                 let distance = 0.005;
+
                 for (let i = 0; i < number; i++) {
                     let address = {position: {}};
                     address.position.lat = _.random(nearby.lat - distance, nearby.lat + distance);
@@ -204,8 +206,9 @@
                 return res;
             },
             updateCenter: _.debounce(async function (newCenter) {
-                this.$data.center.lat = newCenter.lat();
-                this.$data.center.lng = newCenter.lng();
+                console.log('debounced function', arguments);
+//                this.$data.center.lat = newCenter.lat();
+//                this.$data.center.lng = newCenter.lng();
                 this.$data.markers = [];
                 let addresses = await Axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
                     params: {
@@ -213,7 +216,7 @@
                         latlng: newCenter.lat() + ',' + newCenter.lng()
                     }
                 });
-                this.generateDeelersAround(newCenter);
+                this.generateDeelersAround({lat: newCenter.lat(), lng: newCenter.lng()});
                 this.$data.address = _.at(addresses, 'data.results[0].formatted_address');
             }, 500),
         },
@@ -242,5 +245,5 @@
                 },
             }
         }
-    }
+    };
 </script>

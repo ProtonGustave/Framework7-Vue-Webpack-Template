@@ -30,7 +30,8 @@ body {
 
 .navbar {
     width: 100%;
-    padding-top: 14%;
+    height: 14.133333333vw;
+    /*padding-top: 14%;*/
     /*padding-top: 17.261904761%;*/
     background: rgba(0, 0, 0, 0) url("/static/header2.png") no-repeat center center;
     background-size: contain;
@@ -45,15 +46,15 @@ body {
     border: none;
     border-radius: 0;
     color: black;
-    padding-top: 17.261904761%;
     /*line-height: 3.25rem;*/
     /*height: 10.419%;*/
     font-size: 1.8125rem;
     position: fixed;
+    height: 16.266666666vw;
     bottom: 03.225806451%;
     left: 05.33333333333333%;
     background: rgba(0, 0, 0, 0) url("/static/get-button.png") no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 #get-button * {
@@ -69,10 +70,10 @@ body {
 #to-location-btn {
     position: fixed;
     right: 5.28511822%;
-    bottom: 21.326164874%;
+    bottom: 31.733333333vw;
     border-radius: 100%;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 12vw;
+    height: 12vw;
     line-height: 95px;
     background: rgba(0, 0, 0, 0) url("/static/Location.png");
     background-size: contain;
@@ -91,6 +92,7 @@ body {
 
 #search-box input {
     color: #525760;
+    line-height: 15.466666666vw;
     font-size: 1.1rem;
     width: 80% !important;
     font-family: HelveticaNeue2;
@@ -123,17 +125,23 @@ body {
 #search-box #dot {
     float: left;
     width: 15%;
-    color: #CCF600;
 
+    color: #CCF600;
     height: 100%;
-    /*line-height: 1.875rem;*/
     text-align: center;
     background-color: white;
+    position: relative;
 }
 
 #search-box #dot i {
-    line-height: 3.952688rem;
     font-size: 0.575rem;
+    line-height: 15.466666666vw;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
 }
 
 #search-box input {
@@ -199,11 +207,12 @@ body {
 }
 
 .search-box-container{
-    padding-top: 17.261904761%;
+    height: 15.466666666vw;
     z-index: 9;
     position: absolute;
     width: 89.6%;
-    top: 5rem;
+    top: 18.4vw;
+
     /*top: 12.36559139784946%;*/
 
     left: 05.33333333333333%;
@@ -223,4 +232,70 @@ body {
     top:0;
     right: 0;
     bottom: 0;
+}
+
+#delivery {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    bottom: 6.5rem;
+    text-align: center;
+    font-family: HelveticaNeue2;
+    font-size: 0.9rem;
+    line-height: 05.866666666vw;
+}
+
+
+#delivery #estimate{
+    background-color: white;
+    height: 07.333333333vw;
+    min-width: 29.6vw;
+    text-align: center;
+    display: inline-block;
+    user-select: none;
+}
+
+/**/
+
+
+#estimate #time p {
+    color: white;
+    display: block;
+    line-height: 02.933333333vw;
+    margin: 0;
+    padding: 0.2rem;
+}
+
+#estimate #time #timeVal {
+    font-size: 0.7rem;
+    width: 07.333333333vw;
+    height: 3.6666666665vw;
+    vertical-align: bottom;
+    /*padding-bottom: 0px;*/
+    /*padding-top: 10px;*/
+    /*line-height: 20px;*/
+    padding: 3px 0 0 0;
+}
+
+#estimate #time #timeUnit {
+    /*padding-top: 2px;*/
+    width: 07.333333333vw;
+    height: 3.6666666665vw;
+    font-size: 0.5rem;
+    padding: 0;
+    margin-top: -0.3vw;
+}
+
+#estimate p {
+    margin: 0 0.6875rem;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 07.333333333vw;
+}
+
+#estimate #time {
+    width: 07.333333333vw;
+    height: 07.333333333vw;
+    background-color: black;
+    float: left;
 }
