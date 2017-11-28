@@ -94,7 +94,7 @@
                             </div>
                         </div>
                         <div>
-                            <f7-button id="get-button" class="shadow" @click="getVisible = true"></f7-button>
+                            <f7-button id="get-button" class="shadow" @click="getHigh"></f7-button>
                         </div>
                     </f7-page>
                 </f7-pages>
@@ -145,10 +145,6 @@
                 </f7-pages>
             </f7-view>
         </f7-login-screen>
-        <f7-popup :opened="getVisible">
-            <p>Popup content goes here </p><!-- -->
-            <a @click="getVisible = false">Close</a><!-- -->
-        </f7-popup>
     </div>
 </template>
 
@@ -219,12 +215,40 @@
                 this.generateDeelersAround({lat: newCenter.lat(), lng: newCenter.lng()});
                 this.$data.address = _.at(addresses, 'data.results[0].formatted_address');
             }, 0),
+            getHigh: function () {
+                this.$data.framework7.actions([
+                    {
+                        text: 'What is your budget?',
+                        label: true,
+                    },
+                    {
+                        text: '$10',
+                        onClick: function () {
+                            
+                        }
+                    },
+                    {
+                        text: '$20'
+                    },
+                    {
+                        text: '$50'
+                    },
+                    {
+                        text: '$100 & up'
+                    },
+                    {
+                        text: 'Cancel',
+                        color: 'red'
+                    },
+                ]);
+            },
         },
         data: function () {
             return {
+                framework7 : new Framework7(),
+                $$: Dom7,
                 center: {lat: -34.397, lng: 150.644},
                 address: 'Where to ?',
-                getVisible: false,
                 userMarker: {
                     position: {lat: -34.397, lng: 150.644},
                     icon: {

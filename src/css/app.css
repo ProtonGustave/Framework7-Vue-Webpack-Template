@@ -310,3 +310,39 @@ body {
     background-color: black;
     float: left;
 }
+
+
+.actions-modal.modal-in{
+    background: white;
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    font-family: Helvetica Neue, Helvetica, Arial;
+    color: #000;
+}
+
+.actions-modal.modal-in .actions-modal-label{
+    font-size: 2rem;
+    color: #000;
+    font-family: Helvetica Neue, Helvetica, Arial;
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin: .7rem 0 1rem;
+}
+
+.actions-modal.modal-in .actions-modal-button{
+    background-color: #CCF600;
+    border-radius: 0!important;
+    color: black;
+    margin: 1rem 04.823151125%;
+    width: 90.353697749%;
+    font-weight: bold;
+    font-size: 1.6rem;
+    height: 16.077170418vw;
+    line-height: 16.077170418vw;
+}
+
+.actions-modal.modal-in .actions-modal-button.color-red{
+    background-color: #F6F6F6;
+    margin: 2rem 04.823151125% 1rem;
+}
