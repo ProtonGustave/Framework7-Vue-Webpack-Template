@@ -346,3 +346,7 @@ body {
     background-color: #F6F6F6;
     margin: 2rem 04.823151125% 1rem;
 }
+
+.actions-modal-button:after, .actions-modal-label:after{
+    display: none;
+}
