@@ -66,9 +66,9 @@
                                     @idle="onIdle"
                             >
                                 <!--<googlemaps-user-position :position="userMarker.position"-->
-                                                          <!--:icon="userMarker.icon"-->
-                                                          <!--:radius="1"-->
-                                                          <!--:key="1">-->
+                                <!--:icon="userMarker.icon"-->
+                                <!--:radius="1"-->
+                                <!--:key="1">-->
                                 <!--</googlemaps-user-position>-->
                                 <googlemaps-marker :position="userMarker.position"
                                                    :icon="userMarker.icon"
@@ -215,17 +215,33 @@
                 this.generateDeelersAround({lat: newCenter.lat(), lng: newCenter.lng()});
                 this.$data.address = _.at(addresses, 'data.results[0].formatted_address');
             }, 0),
+            whatEffect: function () {
+                let returned = this.$data.framework7.actions([
+                    {
+                        text: 'What effect would you like to get?',
+                        label: true,
+                    },
+                    {
+                        text: 'Get Hight',
+                    },
+                    {
+                        text: 'Relax & Pain Relif'
+                    },
+                    {
+                        text: 'Cancel',
+                        color: 'red'
+                    },
+                ]);
+
+            },
             getHigh: function () {
-                this.$data.framework7.actions([
+                let returned = this.$data.framework7.actions([
                     {
                         text: 'What is your budget?',
                         label: true,
                     },
                     {
                         text: '$10',
-                        onClick: function () {
-                            
-                        }
                     },
                     {
                         text: '$20'
@@ -241,11 +257,18 @@
                         color: 'red'
                     },
                 ]);
+                this.$data.$$(returned).on('click', function (event) {
+                    console.log(event.target.innerHTML);
+                    console.log(this);
+                    this.whatEffect();
+
+                }.bind(this));
             },
-        },
+        }
+        ,
         data: function () {
             return {
-                framework7 : new Framework7(),
+                framework7: new Framework7(),
                 $$: Dom7,
                 center: {lat: -34.397, lng: 150.644},
                 address: 'Where to ?',
@@ -269,5 +292,6 @@
                 },
             }
         }
-    };
+    }
+    ;
 </script>
