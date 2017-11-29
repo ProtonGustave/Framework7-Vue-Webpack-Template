@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba52eb6b-fb4b-42db-a94d-39d27530a8f0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/registration.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/signup2.vue" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/css/app.1163483c34e0f84adf83837efebd5bee.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/css/app.1163483c34e0f84adf83837efebd5bee.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.2a6f4bab49f66c89c842.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.2a6f4bab49f66c89c842.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.e2485ed9201a710c5f50.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.e2485ed9201a710c5f50.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app.vue" afterPath="$PROJECT_DIR$/src/app.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/app.css" afterPath="$PROJECT_DIR$/src/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes.js" afterPath="$PROJECT_DIR$/src/routes.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,25 +26,25 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="414" column="17" lean-forward="false" selection-start-line="414" selection-start-column="17" selection-end-line="414" selection-end-column="17" />
+            <state relative-caret-position="235">
+              <caret line="433" column="16" lean-forward="false" selection-start-line="433" selection-start-column="16" selection-end-line="433" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="150" column="46" lean-forward="false" selection-start-line="150" selection-start-column="46" selection-end-line="150" selection-end-column="66" />
+            <state relative-caret-position="238">
+              <caret line="127" column="75" lean-forward="false" selection-start-line="127" selection-start-column="75" selection-end-line="127" selection-end-column="75" />
               <folding>
                 <element signature="n#f7-panel#0;n#div#0;n#template#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#googlemaps-map#0;n#div#1;n#f7-page#0;n#f7-pages#0;n#f7-view#0;n#f7-views#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#8832#8855#0" expanded="true" />
+                <element signature="e#8908#8931#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -180,8 +184,8 @@
         <option value="$PROJECT_DIR$/src/pages/registration.vue" />
         <option value="$PROJECT_DIR$/src/pages/signup2.vue" />
         <option value="$PROJECT_DIR$/src/routes.js" />
-        <option value="$PROJECT_DIR$/src/app.vue" />
         <option value="$PROJECT_DIR$/src/css/app.css" />
+        <option value="$PROJECT_DIR$/src/app.vue" />
       </list>
     </option>
   </component>
@@ -411,12 +415,12 @@
       <workItem from="1511762192889" duration="2330000" />
       <workItem from="1511793498065" duration="493000" />
       <workItem from="1511803814581" duration="18594000" />
-      <workItem from="1511890501233" duration="7177000" />
+      <workItem from="1511890501233" duration="9056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70275000" />
+    <option name="totallyTimeSpent" value="72154000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
@@ -504,7 +508,7 @@
           <folding>
             <element signature="n#f7-panel#0;n#div#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#googlemaps-map#0;n#div#1;n#f7-page#0;n#f7-pages#0;n#f7-view#0;n#f7-views#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#8832#8855#0" expanded="true" />
+            <element signature="e#8908#8931#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -827,23 +831,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.vue">
+    <entry file="file://$PROJECT_DIR$/src/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="150" column="46" lean-forward="false" selection-start-line="150" selection-start-column="46" selection-end-line="150" selection-end-column="66" />
-          <folding>
-            <element signature="n#f7-panel#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#googlemaps-map#0;n#div#1;n#f7-page#0;n#f7-pages#0;n#f7-view#0;n#f7-views#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#8832#8855#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="235">
+          <caret line="433" column="16" lean-forward="false" selection-start-line="433" selection-start-column="16" selection-end-line="433" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/app.css">
+    <entry file="file://$PROJECT_DIR$/src/app.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="414" column="17" lean-forward="false" selection-start-line="414" selection-start-column="17" selection-end-line="414" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="127" column="75" lean-forward="false" selection-start-line="127" selection-start-column="75" selection-end-line="127" selection-end-column="75" />
+          <folding>
+            <element signature="n#f7-panel#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#googlemaps-map#0;n#div#1;n#f7-page#0;n#f7-pages#0;n#f7-view#0;n#f7-views#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#8908#8931#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

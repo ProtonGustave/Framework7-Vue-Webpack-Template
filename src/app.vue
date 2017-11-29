@@ -118,14 +118,14 @@
                     <f7-page v-if="step === 1">
                         <h1 class="title">Enter your age</h1>
                         <div class="center-content">
-                            <f7-input type="number" id="age" placeholder="Your age"/>
+                            <f7-input type="number" :autofocus="step === 1" id="age" placeholder="Your age"/>
                         </div>
                         <f7-button class="actions-modal-button bottom" @click="step = step + 1">NEXT</f7-button>
                     </f7-page>
                     <f7-page v-if="step === 2">
                         <h1 class="title">What's your first name?</h1>
                         <div class="center-content">
-                            <f7-input type="text" id="first_name" placeholder="First name"/>
+                            <f7-input type="text"  :autofocus="step === 2"  id="first_name" placeholder="First name"/>
                         </div>
                         <f7-button class="actions-modal-button bottom" @click="step = step + 1">NEXT</f7-button>
                     </f7-page>
@@ -141,7 +141,7 @@
                     <f7-page v-if="step === 4">
                         <h1 class="title">Your email</h1>
                         <div class="center-content">
-                            <f7-input type="text" id="email" placeholder="name@mail.com"/>
+                            <f7-input type="text" id="email"  :autofocus="step === 4"  placeholder="name@mail.com"/>
                         </div>
                         <f7-button class="actions-modal-button bottom" @click="step = step + 1">NEXT</f7-button>
                     </f7-page>
