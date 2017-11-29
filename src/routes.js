@@ -1,15 +1,15 @@
 export default [
     {
+        path: '/signup_01/',
+        component: require('./pages/registration/step_01.vue')
+    },
+    {
+        path: '/signup_02/',
+        component: require('./pages/registration/step_02.vue')
+    },
+    {
         path: '/about/',
         component: require('./pages/about.vue')
-    },
-    {
-        path: '/signup/',
-        component: require('./pages/registration.vue')
-    },
-    {
-        path: '/signup/:step',
-        component: require('./pages/signup2.vue')
     },
     {
         path: '/form/',

@@ -1,4 +1,5 @@
 @import "font-awesome-4.7.0/css/font-awesome.min.css";
+@import "animate.css";
 
 @font-face {
     font-family: HelveticaNeue;
@@ -21,11 +22,6 @@
     font-family: HelveticaNeue2;
     src: url('../css/fonts/HelveticaNeue/HelveticaNeueLt.ttf');
     font-weight: normal;
-}
-
-body {
-    font-family: Helvetica Neue, Helvetica, Arial;
-    position: absolute;
 }
 
 #pin {
@@ -138,7 +134,6 @@ body {
 #search-box #dot {
     float: left;
     width: 15%;
-
     color: #CCF600;
     height: 100%;
     text-align: center;
@@ -330,18 +325,7 @@ body {
     margin: .7rem 0 1rem;
 }
 
-.actions-modal.modal-in .actions-modal-button, .actions-modal-button{
-    background-color: #CCF600;
-    border-radius: 0!important;
-    color: black;
-    margin: 1rem 04.823151125%;
-    width: 90.353697749%;
-    font-weight: bold;
-    font-size: 1.6rem;
-    height: 16.077170418vw;
-    line-height: 16.077170418vw;
-    border: none;
-}
+
 
 .actions-modal.modal-in .actions-modal-button.color-red{
     background-color: #F6F6F6;
@@ -352,51 +336,9 @@ body {
     display: none;
 }
 
-h1.title{
-    width: 100%;
-    text-align: center;
-    font-size: 2rem;
-    color: #000;
-    font-family: Helvetica Neue, Helvetica, Arial;
-    font-weight: bold;
-    letter-spacing: -1px;
-    margin: .7rem 0 1rem;
-}
-
-.bottom{
-    position: absolute;
-    bottom: 1rem;
-}
-
-.signup .page-content{
-    background-color: white;
-}
-
-.signup input{
-    border: none;
-    font-size: 2rem;
-    font-family: HelveticaNeue2, Helvetica, Arial;
-}
-
-.signup .page-content{
-    padding: 4rem 0 0 0;
-}
-
 .center-content{
     width: 100%;
     text-align: center;
-}
-
-#age{
-    width: 8rem;
-}
-
-#first_name{
-    width: 10rem;
-}
-
-#email{
-    width: 15rem;
 }
 
 .block{
@@ -405,12 +347,6 @@ h1.title{
     height: auto;
 }
 
-.signup .privacy-licence{
-    color: black;
-    width: 80%;
-    font-weight: normal;
-    margin: 0 10% 0;
-}
 
 .vertical-center{
     position: relative;

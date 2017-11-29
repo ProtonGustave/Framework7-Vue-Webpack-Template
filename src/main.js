@@ -25,6 +25,9 @@ import Routes from './routes.js'
 import App from './app'
 import Axios from 'axios'
 
+import style from './css/style.styl';
+import interactjs from 'interactjs';
+
 window.Axios = Axios;
 
 window.getMinScale = function getMinScale(number) {
