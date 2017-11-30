@@ -26,12 +26,12 @@ import App from './app'
 import Axios from 'axios'
 
 import style from './css/style.styl';
-;
+// import 'vux/src/styles/index.less';
+// ;
 
-import 'mint-ui/lib/style.css'
-
-import Mint from 'mint-ui';
-Vue.use(Mint);
+// import {Picker} from 'vux'
+//
+// Vue.use(Picker);
 
 window.Axios = Axios;
 

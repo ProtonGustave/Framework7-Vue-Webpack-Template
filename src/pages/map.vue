@@ -1,6 +1,5 @@
 <template>
     <f7-page>
-        <f7-navbar title="" back-link="Back" sliding></f7-navbar>
         <div class="content" inner>
             <div class="item-content">
                 <div class="item-inner search-box-container shadow">
