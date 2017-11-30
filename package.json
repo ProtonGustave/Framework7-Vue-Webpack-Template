@@ -39,8 +39,10 @@
     "interactjs": "^1.2.9",
     "jade": "^1.11.0",
     "lodash": "^4.17.4",
+    "mint-ui": "^2.2.12",
     "morgan": "^1.9.0",
     "path": "^0.12.7",
+    "vant": "^0.11.4",
     "vue": "^2.2.4",
     "vue-googlemaps": "0.0.6",
     "vue2-google-maps": "^0.8.4"

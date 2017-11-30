@@ -26,7 +26,12 @@ import App from './app'
 import Axios from 'axios'
 
 import style from './css/style.styl';
-import interactjs from 'interactjs';
+;
+
+import 'mint-ui/lib/style.css'
+
+import Mint from 'mint-ui';
+Vue.use(Mint);
 
 window.Axios = Axios;
 
