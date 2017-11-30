@@ -4,9 +4,9 @@
         <div class="content signup" inner>
             <h1 class="title">Enter your age</h1>
             <div class="center-content">
-                <f7-input type="number" id="age" placeholder="Your age"/>
+                <f7-input type="number" id="age" :autofocus="true" placeholder="Your age"/>
             </div>
-            <f7-button class="actions-modal-button bottom" href="/signup/step_02/">NEXT</f7-button>
+            <f7-button class="actions-modal-button bottom" href="/signup_02/">NEXT</f7-button>
         </div>
     </f7-page>
 </template>

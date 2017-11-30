@@ -29,7 +29,7 @@
                                           link-close-panel></f7-list-item>
                             <f7-list-item link="/form/" title="Form" link-view="#main-view"
                                           link-close-panel></f7-list-item>
-                            <f7-list-item link="/signup/" title="Signup" link-view="#modal-view"
+                            <f7-list-item link="/signup_01/" title="Signup" link-view="#main-view"
                                           link-close-panel></f7-list-item>
                         </f7-list>
                     </f7-page>
@@ -39,9 +39,9 @@
 
         <!-- Main Views -->
         <f7-views>
-            <f7-view id="main-view" navbar-through :dynamic-navbar="true" main v-if="!isGuest">
+            <f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
                 <!-- iOS Theme Navbar -->
-                <f7-navbar v-if="$theme.ios" id="header">
+                <f7-navbar id="header">
                     <f7-nav-left class="open-panel">
                         <div id="menu-button" class="invisible"></div>
                     </f7-nav-left>
@@ -104,60 +104,6 @@
                     </f7-page>
                 </f7-pages>
             </f7-view>
-            <f7-view id="modal-view" class="signup" :active="isGuest" url="/signup/" :animate-pages="true" init>
-                <f7-navbar v-if="$theme.ios" id="header">
-                    <f7-nav-left class="open-panel">
-                        <div id="menu-button" class="invisible"></div>
-                    </f7-nav-left>
-                    <f7-nav-center sliding></f7-nav-center>
-                    <f7-nav-right>
-                        <f7-link icon="icon-bars" open-panel="left" style="visibility: hidden;"></f7-link>
-                    </f7-nav-right>
-                </f7-navbar>
-                <f7-pages>
-                    <f7-page v-if="step === 1">
-                        <h1 class="title">Enter your age</h1>
-                        <div class="center-content">
-                            <f7-input type="number" :autofocus="step === 1" id="age" placeholder="Your age"/>
-                        </div>
-                        <f7-button class="actions-modal-button bottom" @click="step = step + 1">NEXT</f7-button>
-                    </f7-page>
-                    <f7-page v-if="step === 2">
-                        <h1 class="title">What's your first name?</h1>
-                        <div class="center-content">
-                            <f7-input type="text"  :autofocus="step === 2"  id="first_name" placeholder="First name"/>
-                        </div>
-                        <f7-button class="actions-modal-button bottom" @click="step = step + 1">NEXT</f7-button>
-                    </f7-page>
-                    <f7-page v-if="step === 3">
-                        <h1 class="title">Quickly describe your experience with cannabis</h1>
-                        <div class="block bottom">
-                            <f7-button class="actions-modal-button" @click="step = step + 1">I am new</f7-button>
-                            <f7-button class="actions-modal-button" @click="step = step + 1">Had some experiments</f7-button>
-                            <f7-button class="actions-modal-button" @click="step = step + 1">Experienced user</f7-button>
-                            <f7-button class="actions-modal-button" @click="step = step + 1">Professional</f7-button>
-                        </div>
-                    </f7-page>
-                    <f7-page v-if="step === 4">
-                        <h1 class="title">Your email</h1>
-                        <div class="center-content">
-                            <f7-input type="text" id="email"  :autofocus="step === 4"  placeholder="name@mail.com"/>
-                        </div>
-                        <f7-button class="actions-modal-button bottom" @click="step = step + 1">NEXT</f7-button>
-                    </f7-page>
-                    <f7-page v-if="step === 5">
-                        <h1 class="title">Please allow access</h1>
-                        <div class="vertical-center">
-                            <f7-button class="actions-modal-button" @click="getUserPosition();step = step + 1; isGuest = false">ENABLE LOCATION</f7-button>
-                        </div>
-                        <div class="bottom">
-                            <p class="privacy-licence center-content">
-                                Your privacy is important. We use contacts to find friends on the app and location to find nearby schools to join
-                            </p>
-                        </div>
-                    </f7-page>
-                </f7-pages>
-            </f7-view>
         </f7-views>
     </div>
 </template>
@@ -171,6 +117,9 @@
             this.generateDeelersAround(this.$data.center);
             this.$data.userMarker.position = await this.getUserPosition();
             this.$data.center = this.$data.userMarker.position;
+            if(this.$data.isGuest){
+                app.$f7Router.framework7.mainView.router.loadPage('/signup_01/');
+            }
         },
         methods: {
             toLocation: async function () {
