@@ -12,7 +12,7 @@
         <div class="content signup" inner>
             <h1 class="title">Enter your age</h1>
             <div class="center-content">
-                <f7-input type="number" pattern="\d*" id="age" :autofocus="autofocus" placeholder="Your age"
+                <f7-input type="number" pattern="\d*" id="age" placeholder="Your age"
                           @focus="handlerFocus()"/>
             </div>
             <div class="bottom">
@@ -27,8 +27,8 @@
 
 <script>
     export default {
-        beforeDestroy(){
-            this.$data.autofocus = false;
+        mounted: function () {
+            this.$data.$$('#age').focus();
         },
         methods: {
             handlerFocus: function () {
@@ -38,7 +38,6 @@
         },
         data: function () {
             return {
-                autofocus: true,
                 $$: Dom7,
             }
         }

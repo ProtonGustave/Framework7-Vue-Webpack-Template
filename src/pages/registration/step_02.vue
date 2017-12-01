@@ -12,7 +12,7 @@
         <div class="content signup" inner>
             <h1 class="title">What's your first name?</h1>
             <div class="center-content">
-                <f7-input type="text" :autofocus="autofocus" id="first_name" placeholder="First name"
+                <f7-input type="text" id="first_name" placeholder="First name"
                           @focus="handlerFocus()"/>
             </div>
             <f7-button class="actions-modal-button bottom" href="/signup_03/">NEXT</f7-button>
@@ -22,8 +22,8 @@
 
 <script>
     export default {
-        beforeDestroy(){
-            this.$data.autofocus = false;
+        mounted: function () {
+            this.$data.$$('#first_name').focus();
         },
         methods: {
             handlerFocus: function () {

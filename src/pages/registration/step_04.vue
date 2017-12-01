@@ -12,7 +12,7 @@
         <div class="content signup" inner>
             <h1 class="title">Your email</h1>
             <div class="center-content">
-                <f7-input type="text" id="email" :autofocus="autofocus" placeholder="name@mail.com"
+                <f7-input type="text" id="email" placeholder="name@mail.com"
                           @focus="handlerFocus()"/>
             </div>
             <f7-button class="actions-modal-button bottom" href="/signup_05/">NEXT</f7-button>
@@ -22,8 +22,8 @@
 
 <script>
     export default {
-        beforeDestroy(){
-            this.$data.autofocus = false;
+        mounted: function () {
+            this.$data.$$('#email').focus();
         },
         methods: {
             handlerFocus: function () {
