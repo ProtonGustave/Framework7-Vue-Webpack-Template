@@ -12,7 +12,7 @@
         <div class="content signup" inner>
             <h1 class="title">Enter your age</h1>
             <div class="center-content">
-                <f7-input type="number" pattern="\d*" id="age" placeholder="Your age"/>
+                <f7-input type="number" pattern="\d*" id="age" placeholder="Your age" @focus="handlerFocus()"/>
             </div>
             <div class="bottom">
                 <p class="privacy-licence center-content">
@@ -25,5 +25,17 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+        methods: {
+            handlerFocus: function () {
+                this.$data.$$('div.bottom').css('border-bottom','35vh solid transparent');
+                console.log(this.$data.$$);
+            },
+        },
+        data: function () {
+            return {
+                $$: Dom7,
+            }
+        }
+    };
 </script>

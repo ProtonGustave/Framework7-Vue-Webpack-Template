@@ -1,5 +1,15 @@
 <template>
     <f7-page>
+        <!-- iOS Theme Navbar -->
+        <f7-navbar id="header">
+            <f7-nav-left class="open-panel">
+                <div id="menu-button" class="invisible"></div>
+            </f7-nav-left>
+            <f7-nav-center sliding></f7-nav-center>
+            <f7-nav-right>
+                <f7-link icon="icon-bars" open-panel="left" style="visibility: hidden;"></f7-link>
+            </f7-nav-right>
+        </f7-navbar>
         <div class="content" inner>
             <div class="item-content">
                 <div class="item-inner search-box-container shadow">
