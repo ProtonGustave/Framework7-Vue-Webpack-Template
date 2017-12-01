@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba52eb6b-fb4b-42db-a94d-39d27530a8f0" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.d05b69272114c8306e6f.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.d05b69272114c8306e6f.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.4636dc37498b27c2fb7a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.4636dc37498b27c2fb7a.js.map" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/static/intro.png" afterPath="$PROJECT_DIR$/dist/static/intro.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/registration/step_01.vue" afterPath="$PROJECT_DIR$/src/pages/registration/step_01.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -80,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/src/pages/registration/step_01.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="79" lean-forward="false" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+              <caret line="14" column="84" lean-forward="false" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -381,6 +388,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ba52eb6b-fb4b-42db-a94d-39d27530a8f0" name="Default" comment="" />
@@ -405,16 +415,15 @@
       <workItem from="1512063258643" duration="13871000" />
       <workItem from="1512081825316" duration="253000" />
       <workItem from="1512127150316" duration="6098000" />
-      <workItem from="1512149137862" duration="2217000" />
+      <workItem from="1512149137862" duration="2590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107856000" />
+    <option name="totallyTimeSpent" value="108229000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="1370" height="735" extended-state="1" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -423,7 +432,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32724252" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32724252" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -710,6 +719,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="14" column="120" lean-forward="false" selection-start-line="14" selection-start-column="120" selection-end-line="14" selection-end-column="120" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -780,7 +790,7 @@
     <entry file="file://$PROJECT_DIR$/src/pages/registration/step_01.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="79" lean-forward="false" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+          <caret line="14" column="84" lean-forward="false" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
           <folding />
         </state>
       </provider>
