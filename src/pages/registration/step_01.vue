@@ -29,6 +29,8 @@
         methods: {
             handlerFocus: function () {
                 this.$data.$$('div.bottom').css('border-bottom','35vh solid transparent');
+                this.$data.$$('#age').focus();
+
                 console.log(this.$data.$$);
             },
         },

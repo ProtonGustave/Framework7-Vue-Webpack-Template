@@ -27,6 +27,8 @@
                         :options="{disableDefaultUI: true}"
                         ref="map"
                         @idle="onIdle"
+                        @dragstart="handlerDragStart"
+                        @dragend="handlerDragEnd"
                 >
                     <!--<googlemaps-user-position :position="userMarker.position"-->
                     <!--:icon="userMarker.icon"-->
@@ -47,7 +49,7 @@
             <div id="pin"></div>
             <f7-fab id="to-location-btn" class="shadow" @click="toLocation">
             </f7-fab>
-            <div id="delivery">
+            <div id="delivery" :class="[{ fadeOut: isMapDragged }, { fadeIn: !isMapDragged }, 'animated']">
                 <div id="estimate" class="shadow">
                     <div id="time"><span>
                                 <p id="timeVal">20</p>
@@ -56,7 +58,9 @@
                     <p>delivery</p>
                 </div>
             </div>
-            <div>
+            <div id="findingCouriers" :class="[{ slideOutDown: !isMapDragged }, { slideInUp: isMapDragged }, 'animated']">
+            </div>
+            <div :class="[{ fadeOut: isMapDragged }, { fadeIn: !isMapDragged }, 'animated']">
                 <f7-button id="get-button" class="shadow" @click="getHigh"></f7-button>
             </div>
         </div>
@@ -72,11 +76,16 @@
             this.generateDeelersAround(this.$data.center);
             this.$data.userMarker.position = await this.getUserPosition();
             this.$data.center = this.$data.userMarker.position;
-            if (this.$data.isGuest) {
-                app.$f7Router.framework7.mainView.router.loadPage('/signup_01/');
-            }
         },
         methods: {
+            handlerDragStart: function () {
+                this.$data.isMapDragged = true;
+                console.log('dragstart');
+            },
+            handlerDragEnd: function () {
+                this.$data.isMapDragged = false;
+                console.log('dragend');
+            },
             toLocation: async function () {
                 console.log(this.$data.userMarker.position.lat, this.$data.userMarker.position.lng);
                 this.$refs.map.panTo(this.$data.userMarker.position);
@@ -190,6 +199,7 @@
                 $$: Dom7,
                 isGuest: true,
                 step: 1,
+                isMapDragged: false,
                 center: {lat: -34.397, lng: 150.644},
                 address: 'Where to ?',
                 userMarker: {

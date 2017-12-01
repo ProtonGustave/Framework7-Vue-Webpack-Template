@@ -12,7 +12,7 @@
         <div class="content signup" inner>
             <h1 class="title">What's your first name?</h1>
             <div class="center-content">
-                <f7-input type="text" :autofocus="true" id="first_name" placeholder="First name"/>
+                <f7-input type="text" :autofocus="true" id="first_name" placeholder="First name" @focus="handlerFocus()"/>
             </div>
             <f7-button class="actions-modal-button bottom" href="/signup_03/">NEXT</f7-button>
         </div>
@@ -20,5 +20,12 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+        methods: {
+            handlerFocus: function () {
+                this.$data.$$('div.bottom').css('border-bottom','35vh solid transparent');
+                console.log(this.$data.$$);
+            },
+        },
+    }
 </script>

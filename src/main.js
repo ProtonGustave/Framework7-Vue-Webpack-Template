@@ -33,6 +33,8 @@ import style from './css/style.styl';
 //
 // Vue.use(Picker);
 
+import './../src/css/animate.css'
+
 window.Axios = Axios;
 
 window.getMinScale = function getMinScale(number) {
