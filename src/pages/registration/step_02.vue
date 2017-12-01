@@ -12,7 +12,7 @@
         <div class="content signup" inner>
             <h1 class="title">What's your first name?</h1>
             <div class="center-content">
-                <f7-input type="text" id="first_name" placeholder="First name"
+                <f7-input type="text" id="first_name" placeholder="First name" :autofocus="focused"
                           @focus="handlerFocus()"/>
             </div>
             <div class="bottom">
