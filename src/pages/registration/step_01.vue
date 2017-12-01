@@ -13,7 +13,7 @@
             <h1 class="title">Enter your age</h1>
             <div class="center-content">
                 <f7-input type="number" pattern="\d*" id="age" placeholder="Your age"
-                         v-focus="focused" @blur="focused = false"
+                         v-focus="focused" @blur="focused = false" :autofocus="focused"
                           @focus="handlerFocus()"/>
             </div>
             <div class="bottom">
