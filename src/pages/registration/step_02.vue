@@ -27,7 +27,7 @@
 
     export default {
         mounted: function () {
-            this.$data.$$('#first_name').focus();
+            this.$data.$$('#first_name').click();
         },
         directives: { focus: focus },
         methods: {
