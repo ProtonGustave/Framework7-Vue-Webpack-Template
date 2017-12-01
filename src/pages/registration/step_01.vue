@@ -12,7 +12,8 @@
         <div class="content signup" inner>
             <h1 class="title">Enter your age</h1>
             <div class="center-content">
-                <f7-input type="number" pattern="\d*" id="age" :autofocus="autofocus" placeholder="Your age" @focus="handlerFocus()"/>
+                <f7-input type="number" pattern="\d*" id="age" :autofocus="autofocus" placeholder="Your age"
+                          @focus="handlerFocus()"/>
             </div>
             <div class="bottom">
                 <p class="privacy-licence center-content">
@@ -31,15 +32,13 @@
         },
         methods: {
             handlerFocus: function () {
-                this.$data.$$('div.bottom').css('border-bottom','35vh solid transparent');
-//                this.$data.$$('#age').focus();
-
+                this.$data.$$('div.bottom').css('border-bottom', '35vh solid transparent');
                 console.log(this.$data.$$);
             },
         },
         data: function () {
             return {
-                autofocus:true,
+                autofocus: true,
                 $$: Dom7,
             }
         }
