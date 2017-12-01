@@ -13,6 +13,7 @@
             <h1 class="title">Enter your age</h1>
             <div class="center-content">
                 <f7-input type="number" pattern="\d*" id="age" placeholder="Your age"
+                         v-focus="focused" @blur="focused = false"
                           @focus="handlerFocus()"/>
             </div>
             <div class="bottom">
@@ -26,7 +27,10 @@
 </template>
 
 <script>
+    import { focus } from 'vue-focus';
+
     export default {
+        directives: { focus: focus },
         mounted: function () {
             this.$data.$$('#age').focus();
         },
@@ -34,10 +38,12 @@
             handlerFocus: function () {
                 this.$data.$$('div.bottom').css('border-bottom', '35vh solid transparent');
                 console.log(this.$data.$$);
+                this.$data.focused = true;
             },
         },
         data: function () {
             return {
+                focused: true,
                 $$: Dom7,
             }
         }

@@ -15,25 +15,31 @@
                 <f7-input type="text" id="first_name" placeholder="First name"
                           @focus="handlerFocus()"/>
             </div>
-            <f7-button class="actions-modal-button bottom" href="/signup_03/">NEXT</f7-button>
+            <div class="bottom">
+                <f7-button class="actions-modal-button bottom shadow" href="/signup_03/">NEXT</f7-button>
+            </div>
         </div>
     </f7-page>
 </template>
 
 <script>
+    import { focus } from 'vue-focus';
+
     export default {
         mounted: function () {
             this.$data.$$('#first_name').focus();
         },
+        directives: { focus: focus },
         methods: {
             handlerFocus: function () {
                 this.$data.$$('div.bottom').css('border-bottom', '35vh solid transparent');
                 console.log(this.$data.$$);
+                this.$data.focused = true;
             },
         },
         data: function () {
             return {
-                autofocus: true,
+                focused: true,
                 $$: Dom7,
             }
         }
