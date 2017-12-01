@@ -3,53 +3,47 @@
     <div id="app">
 
         <!-- Statusbar -->
-        <f7-statusbar></f7-statusbar>
+        <!--<f7-statusbar></f7-statusbar>-->
 
-        <!-- Left Panel -->
-        <f7-panel left reveal layout="dark">
-            <f7-view id="left-panel-view" navbar-through :dynamic-navbar="true">
-                <!--<f7-navbar v-if="$theme.ios" title="Left Panel" sliding></f7-navbar>-->
-                <f7-pages>
-                    <f7-page>
-                        <f7-navbar v-if="$theme.material" title="Left Panel" sliding></f7-navbar>
-                        <f7-block inner>
-                            <p>Left panel content goes here</p>
-                        </f7-block>
-                        <f7-block-title>Load page in panel</f7-block-title>
-                        <f7-list>
-                            <f7-list-item link="/about/" title="About"></f7-list-item>
-                            <f7-list-item link="/form/" title="Form"></f7-list-item>
-                        </f7-list>
-                        <f7-block-title>Load page in main view</f7-block-title>
-                        <f7-list>
-                            <f7-list-item link="/about/" title="About" link-view="#main-view"
-                                          link-close-panel></f7-list-item>
-                            <f7-list-item link="/form/" title="Form" link-view="#main-view"
-                                          link-close-panel></f7-list-item>
-                            <f7-list-item link="/signup_01/" title="Signup" link-view="#main-view"
-                                          link-close-panel></f7-list-item>
-                        </f7-list>
-                    </f7-page>
-                </f7-pages>
-            </f7-view>
-        </f7-panel>
+        <!--&lt;!&ndash; Left Panel &ndash;&gt;-->
+        <!--<f7-panel left reveal layout="dark">-->
+            <!--<f7-view id="left-panel-view" navbar-through :dynamic-navbar="true">-->
+                <!--&lt;!&ndash;<f7-navbar v-if="$theme.ios" title="Left Panel" sliding></f7-navbar>&ndash;&gt;-->
+                <!--<f7-pages>-->
+                    <!--<f7-page>-->
+                        <!--<f7-navbar v-if="$theme.material" title="Left Panel" sliding></f7-navbar>-->
+                        <!--<f7-block inner>-->
+                            <!--<p>Left panel content goes here</p>-->
+                        <!--</f7-block>-->
+                        <!--<f7-block-title>Load page in panel</f7-block-title>-->
+                        <!--<f7-list>-->
+                            <!--<f7-list-item link="/about/" title="About"></f7-list-item>-->
+                            <!--<f7-list-item link="/form/" title="Form"></f7-list-item>-->
+                        <!--</f7-list>-->
+                        <!--<f7-block-title>Load page in main view</f7-block-title>-->
+                        <!--<f7-list>-->
+                            <!--<f7-list-item link="/about/" title="About" link-view="#main-view"-->
+                                          <!--link-close-panel></f7-list-item>-->
+                            <!--<f7-list-item link="/form/" title="Form" link-view="#main-view"-->
+                                          <!--link-close-panel></f7-list-item>-->
+                            <!--<f7-list-item link="/signup_01/" title="Signup" link-view="#main-view"-->
+                                          <!--link-close-panel></f7-list-item>-->
+                        <!--</f7-list>-->
+                    <!--</f7-page>-->
+                <!--</f7-pages>-->
+            <!--</f7-view>-->
+        <!--</f7-panel>-->
 
         <!-- Main Views -->
         <f7-views>
-            <f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
-                <!-- iOS Theme Navbar -->
-                <f7-navbar id="header">
-                    <f7-nav-left class="open-panel">
-                        <div id="menu-button" class="invisible"></div>
-                    </f7-nav-left>
-                    <f7-nav-center sliding></f7-nav-center>
-                    <f7-nav-right>
-                        <f7-link icon="icon-bars" open-panel="left" style="visibility: hidden;"></f7-link>
-                    </f7-nav-right>
-                </f7-navbar>
+            <f7-view id="main-view" main>
                 <!-- Pages -->
                 <f7-pages>
-                    <step v-if="isGuest"></step>
+                    <f7-page>
+                        <div id="intro"></div>
+                        <f7-button id="get-started" class="actions-modal-button" href="/signup_01/">GET STARTED</f7-button>
+                    </f7-page>
+                    <!--<step v-if="isGuest"></step>-->
                 </f7-pages>
             </f7-view>
         </f7-views>
@@ -59,10 +53,8 @@
 <script>
     import _ from 'lodash';
     import Axios from 'axios'
-    import step from './pages/registration/step_01.vue'
 
     export default {
-        components: {step},
         data: function () {
             return {
                 $$: Dom7,
