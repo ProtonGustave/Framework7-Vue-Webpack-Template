@@ -20,7 +20,7 @@
                 <p class="privacy-licence center-content">
                     By entering your age and taping next button you agree with ours <a>Terms of Service</a> and <a>Privacy Policy</a>
                 </p>
-                <f7-button class="actions-modal-button bottom shadow" href="/signup_02/">NEXT</f7-button>
+                <f7-button class="actions-modal-button shadow" href="/signup_02/">NEXT</f7-button>
             </div>
         </div>
     </f7-page>

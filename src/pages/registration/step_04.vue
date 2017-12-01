@@ -17,7 +17,7 @@
             </div>
 
             <div class="bottom">
-                <f7-button class="actions-modal-button bottom" href="/signup_05/">NEXT</f7-button>
+                <f7-button class="actions-modal-button" href="/signup_05/">NEXT</f7-button>
             </div>
         </div>
     </f7-page>
