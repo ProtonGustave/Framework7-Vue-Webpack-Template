@@ -24,12 +24,10 @@
 
 <script>
     import { focus } from 'vue-focus';
-    import $ from 'jquery';
-    window.$ = $;
 
     export default {
         mounted: function () {
-            $('#first_name').trigger('click')
+            this.$data.$$('#first_name').focus();
         },
         directives: { focus: focus },
         methods: {
