@@ -16,7 +16,7 @@ h1.title
 .signup
   input
     border none
-    text-align center
+    text-align left
     font-size 2rem
     width 90%
     font-family thinFonts
@@ -47,7 +47,7 @@ h1.title
   line-height 16.077170418vw
   border none
   &:active
-    background-color #add100
+    background-color black
     color white
 
 .pages
@@ -81,10 +81,9 @@ div.content
 #get-started
   background-color white
   position absolute
-  bottom 9%
-  font-family HelveticaNeueBC
-  color transparent
-  background-color transparent
+  bottom 9vw
+  font-family HelveticaNeueMed
+  letter-spacing 1px
 
 a
   color: #000
@@ -103,3 +102,27 @@ a
 .animated
   animation-duration: 0.3s;
   animation-fill-mode: both;
+
+
+input::placeholder
+  text-align center
+
+
+input:focus
+  text-align center
+
+
+#first_name
+  width 9rem
+  text-align left
+
+#email
+  width 14.5rem
+  text-align left
+
+#age
+  width 8rem
+  text-align left
+
+.text-center input
+  text-align center !important

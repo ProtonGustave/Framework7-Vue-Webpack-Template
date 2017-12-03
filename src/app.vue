@@ -41,7 +41,7 @@
                 <f7-pages>
                     <f7-page>
                         <div id="intro"></div>
-                        <f7-button id="get-started" class="actions-modal-button" href="/signup_01/">GET STARTED</f7-button>
+                        <f7-button id="get-started" class="actions-modal-button" href="/signup_01/">GET STERTERD</f7-button>
                     </f7-page>
                     <!--<step v-if="isGuest"></step>-->
                 </f7-pages>

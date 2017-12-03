@@ -12,12 +12,12 @@
         <div class="content signup" inner>
             <h1 class="title">Your email</h1>
             <div class="center-content">
-                <f7-input type="text" id="email" placeholder="name@mail.com"
+                <f7-input type="text" id="email" placeholder="name@mail.com" v-model="email" :class="{'text-center' : !!email}"
                           @focus="handlerFocus()" />
             </div>
 
             <div class="bottom">
-                <f7-button class="actions-modal-button" href="/signup_05/">NEXT</f7-button>
+                <f7-button class="actions-modal-button shadow" href="/signup_05/">NEXT</f7-button>
             </div>
         </div>
     </f7-page>
@@ -29,11 +29,15 @@
     export default {
         directives: { focus: focus },
         mounted: function () {
-            this.$data.$$('#email').focus();
+            setTimeout(()=>{
+                $('#email').focus().click();
+            },0);
         },
         methods: {
             handlerFocus: function () {
-                this.$data.$$('div.bottom').css('border-bottom', '35vh solid transparent');
+                let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+                if(iOS)
+                this.$data.$$('div.bottom').css('border-bottom', '40vh solid transparent');
                 console.log(this.$data.$$);
                 this.$data.focused = true;
             },
@@ -42,7 +46,8 @@
             return {
                 focused: true,
                 $$: Dom7,
-            }
+                email: null,
+            };
         }
     };
 </script>

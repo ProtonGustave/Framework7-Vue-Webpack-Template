@@ -19,6 +19,11 @@
 }
 
 @font-face {
+    font-family: HelveticaNeueMed;
+    src: url('/static/fonts/HelveticaNeue/HelveticaNeue Medium.ttf');
+}
+
+@font-face {
     font-family: HelveticaNeue2;
     src: url('../css/fonts/HelveticaNeue/HelveticaNeueLt.ttf');
     font-weight: normal;
@@ -355,7 +360,7 @@ body {
 
 .vertical-center .actions-modal-button{
     position: absolute;
-    top:32%;
+    top:30vw;
     margin-top: -8.038585209vw;
 }
 
