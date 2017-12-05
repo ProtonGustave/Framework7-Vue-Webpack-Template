@@ -27,7 +27,9 @@
 <script>
     export default {
         mounted: function () {
+            setTimeout(() => {
                 $('#first_name').focus().click();
+            }, 0);
         },
         methods: {
             handlerFocus: function () {
