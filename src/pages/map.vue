@@ -49,7 +49,7 @@
             <div id="pin"></div>
             <f7-fab id="to-location-btn" class="shadow" @click="toLocation">
             </f7-fab>
-            <div id="delivery" :class="[{ fadeOut: isMapDragged }, { fadeIn: !isMapDragged }, 'animated']">
+            <div id="delivery" :class="[{ fadeOut: isMapDragged  || loadingCouriers }, { fadeIn: !isMapDragged }, 'animated']">
                 <div id="estimate" class="shadow">
                     <div id="time"><span>
                                 <p id="timeVal">20</p>
@@ -58,9 +58,10 @@
                     <p>delivery</p>
                 </div>
             </div>
-            <div id="findingCouriers" :class="[{ slideOutDown: !isMapDragged }, { slideInUp: isMapDragged }, 'animated']">
+            <div id="findingCouriers"
+                 :class="[{ slideOutDown: !loadingCouriers }, { slideInUp: loadingCouriers }, 'animated']">
             </div>
-            <div :class="[{ fadeOut: isMapDragged }, { fadeIn: !isMapDragged }, 'animated']">
+            <div :class="[{ fadeOut: isMapDragged || loadingCouriers }, { fadeIn: !isMapDragged || !loadingCouriers}, 'animated']">
                 <f7-button id="get-button" class="shadow" @click="getHigh"></f7-button>
             </div>
         </div>
@@ -160,6 +161,16 @@
                     },
                 ]);
 
+                this.$data.$$(returned).on('click', function (event) {
+                    console.log(event.target.innerHTML);
+                    console.log(this);
+                    this.$data.loadingCouriers = true;
+                    setTimeout(function () {
+                        this.$data.loadingCouriers = false;
+                    }.bind(this), 5000);
+
+                }.bind(this));
+
             },
             getHigh: function () {
                 let returned = this.$data.framework7.actions([
@@ -199,6 +210,7 @@
                 $$: Dom7,
                 isGuest: true,
                 step: 1,
+                loadingCouriers: false,
                 isMapDragged: false,
                 center: {lat: -34.397, lng: 150.644},
                 address: 'Where to ?',

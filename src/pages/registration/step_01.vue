@@ -12,49 +12,40 @@
         <div class="content signup" inner>
             <h1 class="title">Enter your age</h1>
             <div class="center-content">
-                <f7-input type="number" pattern="\d*" id="age" placeholder="Your age" v-model="age"
-                          :class="{'text-center' : ageEntered}"
+                <f7-input type="number" id="age" placeholder="Your age" v-model="age"
+                          :autofocus="true"
+                          :class="{'text-center' : !!age}"
                           @focus="handlerFocus()"/>
             </div>
             <div class="bottom">
                 <p class="privacy-licence center-content">
                     By entering your age and taping next button you agree with ours <a>Terms of Service</a> and <a>Privacy Policy</a>
                 </p>
-                <f7-button class="actions-modal-button shadow" href="/signup_02/">NEXT</f7-button>
+                <f7-button class="actions-modal-button" href="/signup_02/">NEXT</f7-button>
             </div>
         </div>
     </f7-page>
 </template>
 
 <script>
-    import {focus} from 'vue-focus';
-
+    import $ from 'jquery'
+    window.$ = $;
     export default {
-        directives: {focus: focus},
         mounted: function () {
-            $('input').blur();
-            setTimeout(()=>{
+            setTimeout(() => {
                 $('#age').focus().click();
-            },0);
+            }, 0);
         },
         methods: {
             handlerFocus: function () {
                 let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-                if(iOS)
-                this.$data.$$('div.bottom').css('border-bottom', '40vh solid transparent');
-                console.log(this.$data.$$);
-                this.$data.focused = true;
+                if (iOS)
+                    this.$data.$$('div.bottom').css('border-bottom', '40vh solid transparent');
             },
-        },
-        computed: {
-            ageEntered: function () {
-                return !!this.age;
-            }
         },
         data: function () {
             return {
                 age: null,
-                focused: true,
                 $$: Dom7,
             }
         }

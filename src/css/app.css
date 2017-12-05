@@ -48,7 +48,7 @@
     height: 14.133333333vw;
     /*padding-top: 14%;*/
     /*padding-top: 17.261904761%;*/
-    background: rgba(0, 0, 0, 0) url("/static/header2.png") no-repeat center center;
+    background: #D5F54E url("/static/header2.png") no-repeat center center;
     background-size: contain;
 }
 

@@ -7,31 +7,31 @@
 
         <!--&lt;!&ndash; Left Panel &ndash;&gt;-->
         <!--<f7-panel left reveal layout="dark">-->
-            <!--<f7-view id="left-panel-view" navbar-through :dynamic-navbar="true">-->
-                <!--&lt;!&ndash;<f7-navbar v-if="$theme.ios" title="Left Panel" sliding></f7-navbar>&ndash;&gt;-->
-                <!--<f7-pages>-->
-                    <!--<f7-page>-->
-                        <!--<f7-navbar v-if="$theme.material" title="Left Panel" sliding></f7-navbar>-->
-                        <!--<f7-block inner>-->
-                            <!--<p>Left panel content goes here</p>-->
-                        <!--</f7-block>-->
-                        <!--<f7-block-title>Load page in panel</f7-block-title>-->
-                        <!--<f7-list>-->
-                            <!--<f7-list-item link="/about/" title="About"></f7-list-item>-->
-                            <!--<f7-list-item link="/form/" title="Form"></f7-list-item>-->
-                        <!--</f7-list>-->
-                        <!--<f7-block-title>Load page in main view</f7-block-title>-->
-                        <!--<f7-list>-->
-                            <!--<f7-list-item link="/about/" title="About" link-view="#main-view"-->
-                                          <!--link-close-panel></f7-list-item>-->
-                            <!--<f7-list-item link="/form/" title="Form" link-view="#main-view"-->
-                                          <!--link-close-panel></f7-list-item>-->
-                            <!--<f7-list-item link="/signup_01/" title="Signup" link-view="#main-view"-->
-                                          <!--link-close-panel></f7-list-item>-->
-                        <!--</f7-list>-->
-                    <!--</f7-page>-->
-                <!--</f7-pages>-->
-            <!--</f7-view>-->
+        <!--<f7-view id="left-panel-view" navbar-through :dynamic-navbar="true">-->
+        <!--&lt;!&ndash;<f7-navbar v-if="$theme.ios" title="Left Panel" sliding></f7-navbar>&ndash;&gt;-->
+        <!--<f7-pages>-->
+        <!--<f7-page>-->
+        <!--<f7-navbar v-if="$theme.material" title="Left Panel" sliding></f7-navbar>-->
+        <!--<f7-block inner>-->
+        <!--<p>Left panel content goes here</p>-->
+        <!--</f7-block>-->
+        <!--<f7-block-title>Load page in panel</f7-block-title>-->
+        <!--<f7-list>-->
+        <!--<f7-list-item link="/about/" title="About"></f7-list-item>-->
+        <!--<f7-list-item link="/form/" title="Form"></f7-list-item>-->
+        <!--</f7-list>-->
+        <!--<f7-block-title>Load page in main view</f7-block-title>-->
+        <!--<f7-list>-->
+        <!--<f7-list-item link="/about/" title="About" link-view="#main-view"-->
+        <!--link-close-panel></f7-list-item>-->
+        <!--<f7-list-item link="/form/" title="Form" link-view="#main-view"-->
+        <!--link-close-panel></f7-list-item>-->
+        <!--<f7-list-item link="/signup_01/" title="Signup" link-view="#main-view"-->
+        <!--link-close-panel></f7-list-item>-->
+        <!--</f7-list>-->
+        <!--</f7-page>-->
+        <!--</f7-pages>-->
+        <!--</f7-view>-->
         <!--</f7-panel>-->
 
         <!-- Main Views -->
@@ -41,7 +41,9 @@
                 <f7-pages>
                     <f7-page>
                         <div id="intro"></div>
-                        <f7-button id="get-started" class="actions-modal-button" href="/signup_01/">GET STERTERD</f7-button>
+                        <f7-button id="get-started" class="actions-modal-button" href="/signup_01/"
+                                   @click="handlerClickGetStarted">GET STERTERD
+                        </f7-button>
                     </f7-page>
                     <!--<step v-if="isGuest"></step>-->
                 </f7-pages>
@@ -55,6 +57,13 @@
     import Axios from 'axios'
 
     export default {
+        methods: {
+            handlerClickGetStarted: function () {
+//                setTimeout(() => {
+//                    $('#age').focus().click();
+//                }, 1000);
+            }
+        },
         data: function () {
             return {
                 $$: Dom7,
