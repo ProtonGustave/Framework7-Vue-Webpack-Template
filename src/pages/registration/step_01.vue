@@ -34,7 +34,7 @@
         mounted: function () {
             setTimeout(() => {
                 $('#age').focus().click();
-            }, 100);
+            }, 1000);
         },
         methods: {
             handlerFocus: function () {
