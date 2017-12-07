@@ -30,13 +30,13 @@
         mounted: function () {
             setTimeout(()=>{
                 $('#email').focus().click();
-            },0);
+            },100);
         },
         methods: {
             handlerFocus: function () {
                 let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
                 if(iOS)
-                this.$data.$$('div.bottom').css('border-bottom', '40vh solid transparent');
+                this.$data.$$('div.bottom').css('padding-bottom', '40vh solid transparent');
                 this.$data.focused = true;
             },
         },
