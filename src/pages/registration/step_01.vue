@@ -13,7 +13,6 @@
             <h1 class="title">Enter your age</h1>
             <div class="center-content">
                 <f7-input type="number" id="age" placeholder="Your age" v-model="age"
-                          :autofocus="true"
                           :class="{'text-center' : !!age}"
                           @focus="handlerFocus()"/>
             </div>
