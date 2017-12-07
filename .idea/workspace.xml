@@ -2,50 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba52eb6b-fb4b-42db-a94d-39d27530a8f0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/3.4 Courier search24nov.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/Location.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/can_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/css/app.f60abbdcf5762eedc5197150e03d721d.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/css/app.f60abbdcf5762eedc5197150e03d721d.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/dealers_marker.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/dealers_marker222.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue.ccad04d.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/Helvetica Neu Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeue BlackCond.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeue Light.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeue Medium.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeue Thin.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeue.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeueBd.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeueHv.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeueIt.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeueLt.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeueMed.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeueLt.bb5671e.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/fontawesome-webfont.674f50d.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/fontawesome-webfont.af7ae50.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/fontawesome-webfont.b06871f.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/fontawesome-webfont.fee66e7.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/get-button.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/header.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/header2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/img/fontawesome-webfont.912ec66.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/intro.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/iphoneX_.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.bf6517beed7abd5e6aa4.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.bf6517beed7abd5e6aa4.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.4a59b51af83f18c4bcdf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.4a59b51af83f18c4bcdf.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/vendor.65e9d0678167b0d3c44d.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/vendor.65e9d0678167b0d3c44d.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/logo_menu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/marker.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/marker2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/markerX2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/marker_transparent.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/menu_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/point.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/user_position_marker.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.5b044db80f9789fcddba.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.5b044db80f9789fcddba.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.00e8fc6ea580fb7a0975.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.00e8fc6ea580fb7a0975.js.map" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/registration/step_01.vue" afterPath="$PROJECT_DIR$/src/pages/registration/step_01.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -74,8 +35,8 @@
       <file leaf-file-name="step_01.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/registration/step_01.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="33" column="30" lean-forward="true" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+            <state relative-caret-position="68">
+              <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -589,12 +550,12 @@
       <workItem from="1512454615791" duration="315000" />
       <workItem from="1512502639160" duration="1360000" />
       <workItem from="1512581225345" duration="938000" />
-      <workItem from="1512614599600" duration="505000" />
+      <workItem from="1512614599600" duration="738000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132949000" />
+    <option name="totallyTimeSpent" value="133182000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -963,8 +924,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/registration/step_01.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="33" column="30" lean-forward="true" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+        <state relative-caret-position="68">
+          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
           <folding />
         </state>
       </provider>

@@ -2,7 +2,7 @@
     <f7-page>
         <f7-navbar>
             <f7-nav-left>
-                <f7-link back sliding></f7-link>
+                <f7-link back></f7-link>
             </f7-nav-left>
             <f7-nav-center></f7-nav-center>
             <f7-nav-right>
@@ -13,6 +13,7 @@
             <h1 class="title">Enter your age</h1>
             <div class="center-content">
                 <f7-input type="number" id="age" placeholder="Your age" v-model="age"
+                          :autofocus="true"
                           :class="{'text-center' : !!age}"
                           @focus="handlerFocus()"/>
             </div>
