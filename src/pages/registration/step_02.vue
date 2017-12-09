@@ -15,7 +15,7 @@
                 <f7-input type="text" id="first_name" placeholder="First name" v-model="first_name"
                           :autofocus="true"
                           :class="{'text-center' : !!first_name}"
-                          @focus="handlerFocus()"/>
+                          @focus="handlerFocus()" @blur="handleBlur()"/>
             </div>
             <div class="bottom">
                 <f7-button class="actions-modal-button" href="/signup_03/">NEXT</f7-button>
@@ -35,8 +35,13 @@
             handlerFocus: function () {
                 let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
                 if(iOS)
-                this.$data.$$('div.bottom').css('padding-bottom', '40vh solid transparent');
+                this.$data.$$('div.bottom').css('border-bottom', '40vh solid transparent');
             },
+            handleBlur: function () {
+                let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+                if (iOS)
+                    this.$data.$$('div.bottom').css('border-bottom', '0vh solid transparent');
+            }
         },
         data: function () {
             return {

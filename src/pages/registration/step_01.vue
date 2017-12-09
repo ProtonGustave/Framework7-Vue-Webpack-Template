@@ -13,15 +13,15 @@
             <h1 class="title">Enter your age</h1>
             <div class="center-content">
                 <f7-input type="number" id="age" placeholder="Your age" v-model="age"
-                          :autofocus="true"
                           :class="{'text-center' : !!age}"
-                          @focus="handlerFocus()"/>
+                          @focus="handlerFocus()" @blur="handleBlur()"/>
             </div>
             <div class="bottom">
                 <p class="privacy-licence center-content">
                     By entering your age and taping next button you agree with ours <a>Terms of Service</a> and <a>Privacy Policy</a>
                 </p>
                 <f7-button class="actions-modal-button" href="/signup_02/">NEXT</f7-button>
+                <f7-button class="actions-modal-button" href="/signup_01_no_anim/">NO ANIM</f7-button>
             </div>
         </div>
     </f7-page>
@@ -32,21 +32,32 @@
     window.$ = $;
     export default {
         mounted: function () {
-            setTimeout(() => {
-                $('#age').focus().click();
-            }, 1000);
+            setTimeout(function () {
+                this.$data.focused = true;
+                setTimeout(function () {
+                    $('#age').trigger('load').trigger('touchstart');
+                    $('#age').dblclick();
+                }, 1000);
+
+            }.bind(this), 1000);
         },
         methods: {
             handlerFocus: function () {
                 let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
                 if (iOS)
-                    this.$data.$$('div.bottom').css('padding-bottom', '40vh solid transparent');
+                    this.$data.$$('div.bottom').css('border-bottom', '40vh solid transparent');
             },
+            handleBlur: function () {
+                let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+                if (iOS)
+                    this.$data.$$('div.bottom').css('border-bottom', '0vh solid transparent');
+            }
         },
         data: function () {
             return {
                 age: null,
                 $$: Dom7,
+                focused: false,
             }
         }
     };

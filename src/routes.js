@@ -4,6 +4,10 @@ export default [
         component: require('./pages/registration/step_01.vue')
     },
     {
+        path: '/signup_01_no_anim/',
+        component: require('./pages/registration/step_01_no_anim.vue')
+    },
+    {
         path: '/signup_02/',
         component: require('./pages/registration/step_02.vue')
     },
