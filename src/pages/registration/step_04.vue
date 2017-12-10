@@ -1,5 +1,5 @@
 <template>
-    <f7-page>
+    <f7-page @page:afteranimation="afterAnimation">
         <f7-navbar>
             <f7-nav-left>
                 <f7-link back sliding></f7-link>
@@ -13,7 +13,6 @@
             <h1 class="title">Your email</h1>
             <div class="center-content">
                 <f7-input type="text" id="email" placeholder="name@mail.com"
-                          :autofocus="true"
                           v-model="email" :class="{'text-center' : !!email}"
                           @focus="handlerFocus()" @blur="handleBlur()" />
             </div>
@@ -27,12 +26,10 @@
 
 <script>
     export default {
-        mounted: function () {
-            setTimeout(()=>{
-                $('#email').focus().click();
-            },100);
-        },
         methods: {
+            afterAnimation: function () {
+                this.$router.load({url: '/signup_04_no_anim/'})
+            },
             handlerFocus: function () {
                 let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
                 if(iOS)

@@ -59,9 +59,7 @@
     export default {
         methods: {
             handlerClickGetStarted: function () {
-//                setTimeout(() => {
-//                    $('#age').focus().click();
-//                }, 1000);
+
             }
         },
         data: function () {
