@@ -31,16 +31,6 @@
     import $ from 'jquery'
     window.$ = $;
     export default {
-        mounted: function () {
-            setTimeout(function () {
-                this.$data.focused = true;
-                setTimeout(function () {
-                    $('#age').trigger('load').trigger('touchstart');
-                    $('#age').dblclick();
-                }, 1000);
-
-            }.bind(this), 1000);
-        },
         methods: {
             handlerFocus: function () {
                 let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
