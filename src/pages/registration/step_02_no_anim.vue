@@ -1,5 +1,5 @@
 <template>
-    <f7-page class="no-animation">
+    <f7-page>
         <f7-navbar>
             <f7-nav-left>
                 <f7-link back sliding></f7-link>
