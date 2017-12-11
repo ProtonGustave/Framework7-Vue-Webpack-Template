@@ -10,7 +10,7 @@
             </f7-nav-right>
         </f7-navbar>
         <div class="content signup" inner>
-            <h1 class="title">Your email</h1>
+            <h1 class="title">Your email autofocus</h1>
             <div class="center-content">
                 <f7-input type="text" id="email" placeholder="name@mail.com"
                           :autofocus="true"

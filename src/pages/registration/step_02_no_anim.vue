@@ -10,7 +10,7 @@
             </f7-nav-right>
         </f7-navbar>
         <div class="content signup" inner>
-            <h1 class="title">What's your first name?</h1>
+            <h1 class="title">What's your first name? autofocus</h1>
             <div class="center-content">
                 <f7-input type="text" id="first_name" placeholder="First name" v-model="first_name"
                           :autofocus="true"

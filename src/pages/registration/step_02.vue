@@ -28,7 +28,9 @@
         methods: {
             afterAnimation: function () {
                 console.log('after anim');
-                this.$router.load({url: '/signup_02_no_anim/', pushState: false, animatePages: false})
+                this.$router.reload({url: '/signup_02_no_anim/', pushState: false, animatePages: false,
+                    ignoreCache: true,
+                    reload: true})
             },
             handlerFocus: function () {
                 let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;

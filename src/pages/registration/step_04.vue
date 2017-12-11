@@ -14,7 +14,7 @@
             <div class="center-content">
                 <f7-input type="text" id="email" placeholder="name@mail.com"
                           v-model="email" :class="{'text-center' : !!email}"
-                          @focus="handlerFocus()" @blur="handleBlur()" />
+                          @focus="handlerFocus()" @blur="handleBlur()"/>
             </div>
 
             <div class="bottom">
@@ -28,12 +28,16 @@
     export default {
         methods: {
             afterAnimation: function () {
-                this.$router.load({url: '/signup_04_no_anim/', pushState: false, animatePages: false})
+                this.$router.loadPage({
+                    url: '/signup_04_no_anim/', pushState: false, animatePages: false,
+                    ignoreCache: true,
+                    reload: true
+                })
             },
             handlerFocus: function () {
                 let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-                if(iOS)
-                this.$data.$$('div.bottom').css('border-bottom', '40vh solid transparent');
+                if (iOS)
+                    this.$data.$$('div.bottom').css('border-bottom', '40vh solid transparent');
                 this.$data.focused = true;
             },
             handleBlur: function () {
