@@ -32,7 +32,7 @@
     export default {
         methods: {
             afterAnimation: function () {
-                this.$router.load({url: '/signup_01_no_anim/'})
+                this.$router.load({url: '/signup_01_no_anim/', pushState: false, animatePages: false})
             },
             handlerFocus: function () {
                 let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
