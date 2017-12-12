@@ -13,9 +13,10 @@
             <h1 class="title">Enter your age</h1>
             <div class="center-content">
                 <f7-input type="number" id="age" placeholder="Your age" v-model="age"
-                          :autofocus="true"
+                          v-focus="focused"
+                          :autofocus="focused"
                           :class="{'text-center' : !!age}"
-                          @focus="handlerFocus()" @blur="handleBlur()"/>
+                          @focus="handlerFocus(); focused = true" @blur="handleBlur(); focused = false"/>
             </div>
             <div class="bottom">
                 <p class="privacy-licence center-content">
@@ -30,7 +31,10 @@
 <script>
     import $ from 'jquery'
     window.$ = $;
+    import {focus} from 'vue-focus';
+
     export default {
+        directives: {focus: focus},
         methods: {
             handlerFocus: function () {
                 let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
@@ -38,6 +42,7 @@
                     this.$data.$$('div.bottom').css('border-bottom', '40vh solid transparent');
             },
             handleBlur: function () {
+                this.$data.focused = false;
                 let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
                 if (iOS)
                     this.$data.$$('div.bottom').css('border-bottom', '0vh solid transparent');
@@ -47,7 +52,7 @@
             return {
                 age: null,
                 $$: Dom7,
-                focused: false,
+                focused: true,
             }
         }
     };

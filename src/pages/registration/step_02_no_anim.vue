@@ -13,9 +13,10 @@
             <h1 class="title">What's your first name? autofocus</h1>
             <div class="center-content">
                 <f7-input type="text" id="first_name" placeholder="First name" v-model="first_name"
-                          :autofocus="true"
+                          v-focus="focused"
+                          :autofocus="focused"
                           :class="{'text-center' : !!first_name}"
-                          @focus="handlerFocus()" @blur="handleBlur()"/>
+                          @focus="handlerFocus(); focused = true" @blur="handleBlur(); focused = false"/>
             </div>
             <div class="bottom">
                 <f7-button class="actions-modal-button" href="/signup_03/">NEXT</f7-button>
@@ -25,12 +26,15 @@
 </template>
 
 <script>
+    import {focus} from 'vue-focus';
+
     export default {
+        directives: {focus: focus},
         methods: {
             handlerFocus: function () {
                 let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-                if(iOS)
-                this.$data.$$('div.bottom').css('border-bottom', '40vh solid transparent');
+                if (iOS)
+                    this.$data.$$('div.bottom').css('border-bottom', '40vh solid transparent');
             },
             handleBlur: function () {
                 let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
@@ -42,6 +46,7 @@
             return {
                 first_name: null,
                 $$: Dom7,
+                focused: true
             }
         }
     };

@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba52eb6b-fb4b-42db-a94d-39d27530a8f0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.3cfeb5a48e2fb5a25ba6.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.3cfeb5a48e2fb5a25ba6.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.e39d47fb2ba5bf8f13c7.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.e39d47fb2ba5bf8f13c7.js.map" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/registration/step_01.vue" afterPath="$PROJECT_DIR$/src/pages/registration/step_01.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/registration/step_01_no_anim.vue" afterPath="$PROJECT_DIR$/src/pages/registration/step_01_no_anim.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/registration/step_02.vue" afterPath="$PROJECT_DIR$/src/pages/registration/step_02.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/registration/step_02_no_anim.vue" afterPath="$PROJECT_DIR$/src/pages/registration/step_02_no_anim.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/registration/step_04.vue" afterPath="$PROJECT_DIR$/src/pages/registration/step_04.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,11 +22,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="step_02.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="step_02.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/registration/step_02.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="35" column="14" lean-forward="false" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+            <state relative-caret-position="142">
+              <caret line="31" column="15" lean-forward="false" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -35,18 +35,18 @@
       <file leaf-file-name="step_02_no_anim.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/registration/step_02_no_anim.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="98" lean-forward="false" selection-start-line="14" selection-start-column="88" selection-end-line="14" selection-end-column="98" />
+            <state relative-caret-position="-130">
+              <caret line="16" column="46" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="step_01.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="step_01.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/registration/step_01.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="23" column="90" lean-forward="false" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
+            <state relative-caret-position="85">
+              <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -55,8 +55,8 @@
       <file leaf-file-name="step_01_no_anim.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/registration/step_01_no_anim.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="84" lean-forward="false" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="84" />
+            <state relative-caret-position="-144">
+              <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -97,8 +97,18 @@
       <file leaf-file-name="step_04.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/registration/step_04.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="90" lean-forward="false" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
+            <state relative-caret-position="68">
+              <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="methods.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/registration/methods.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -109,16 +119,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="step_03.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/registration/step_03.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -193,13 +193,13 @@
         <option value="$PROJECT_DIR$/src/css/style.styl" />
         <option value="$PROJECT_DIR$/src/pages/registration/methods.js" />
         <option value="$PROJECT_DIR$/src/app.vue" />
-        <option value="$PROJECT_DIR$/src/pages/registration/step_01_no_anim.vue" />
-        <option value="$PROJECT_DIR$/src/pages/registration/step_02_no_anim.vue" />
         <option value="$PROJECT_DIR$/src/pages/registration/step_04_no_anim.vue" />
         <option value="$PROJECT_DIR$/src/routes.js" />
-        <option value="$PROJECT_DIR$/src/pages/registration/step_01.vue" />
-        <option value="$PROJECT_DIR$/src/pages/registration/step_04.vue" />
+        <option value="$PROJECT_DIR$/src/pages/registration/step_01_no_anim.vue" />
+        <option value="$PROJECT_DIR$/src/pages/registration/step_02_no_anim.vue" />
         <option value="$PROJECT_DIR$/src/pages/registration/step_02.vue" />
+        <option value="$PROJECT_DIR$/src/pages/registration/step_04.vue" />
+        <option value="$PROJECT_DIR$/src/pages/registration/step_01.vue" />
       </list>
     </option>
   </component>
@@ -559,12 +559,12 @@
       <workItem from="1512909739846" duration="10327000" />
       <workItem from="1512969500420" duration="1593000" />
       <workItem from="1513019200732" duration="1637000" />
-      <workItem from="1513108882626" duration="796000" />
+      <workItem from="1513108882626" duration="2100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158683000" />
+    <option name="totallyTimeSpent" value="159987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1370" height="744" extended-state="0" />
@@ -860,13 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/registration/methods.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
@@ -878,22 +871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/registration/step_01_no_anim.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="84" lean-forward="false" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/registration/step_02_no_anim.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="98" lean-forward="false" selection-start-line="14" selection-start-column="88" selection-end-line="14" selection-end-column="98" />
           <folding />
         </state>
       </provider>
@@ -924,22 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/registration/step_01.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="23" column="90" lean-forward="false" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/registration/step_04.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="90" lean-forward="false" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/registration/step_04_no_anim.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -948,10 +909,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/registration/step_02_no_anim.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-130">
+          <caret line="16" column="46" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/registration/step_02.vue">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="31" column="15" lean-forward="false" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/registration/step_01_no_anim.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/registration/step_04.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/registration/methods.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="35" column="14" lean-forward="false" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/registration/step_01.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
           <folding />
         </state>
       </provider>
