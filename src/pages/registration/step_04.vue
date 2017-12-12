@@ -1,5 +1,5 @@
 <template>
-    <f7-page @page:afteranimation="afterAnimation">
+    <f7-page @page:afteranimation="afterAnimation" :cached="false">
         <f7-navbar>
             <f7-nav-left>
                 <f7-link back sliding></f7-link>
@@ -29,7 +29,7 @@
     export default {
         methods: {
             afterAnimation: function () {
-                $('#email').focus().click();
+//                $('#email').focus().click();
 //                this.$router.loadPage({
 //                    url: '/signup_04_no_anim/', pushState: false, animatePages: false,
 //                    ignoreCache: true,

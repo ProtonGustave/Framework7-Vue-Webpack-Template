@@ -1,5 +1,5 @@
 <template>
-    <f7-page>
+    <f7-page :cached="false">
         <f7-navbar>
             <f7-nav-left>
                 <f7-link back></f7-link>
