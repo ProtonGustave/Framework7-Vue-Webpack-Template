@@ -21,6 +21,7 @@
                     By entering your age and taping next button you agree with ours <a>Terms of Service</a> and <a>Privacy Policy</a>
                 </p>
                 <f7-button class="actions-modal-button" href="/signup_02/">NEXT</f7-button>
+                <f7-button class="actions-modal-button" href="/signup_01_no_anim/">NO ANIM</f7-button>
             </div>
         </div>
     </f7-page>
@@ -32,11 +33,11 @@
     export default {
         methods: {
             afterAnimation: function () {
-                this.$router.load({
-                    url: '/signup_01_no_anim/', pushState: false, animatePages: false,
-                    ignoreCache: true,
-                    reload: true
-                })
+//                this.$router.load({
+//                    url: '/signup_01_no_anim/', pushState: false, animatePages: false,
+//                    ignoreCache: true,
+//                    reload: true
+//                })
             },
             handlerFocus: function () {
                 let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;

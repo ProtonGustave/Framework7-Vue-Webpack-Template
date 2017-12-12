@@ -19,6 +19,7 @@
 
             <div class="bottom">
                 <f7-button class="actions-modal-button" href="/signup_05/">NEXT</f7-button>
+                <f7-button class="actions-modal-button" href="/signup_04_no_anim/">NO ANIM</f7-button>
             </div>
         </div>
     </f7-page>
@@ -28,11 +29,11 @@
     export default {
         methods: {
             afterAnimation: function () {
-                this.$router.loadPage({
-                    url: '/signup_04_no_anim/', pushState: false, animatePages: false,
-                    ignoreCache: true,
-                    reload: true
-                })
+//                this.$router.loadPage({
+//                    url: '/signup_04_no_anim/', pushState: false, animatePages: false,
+//                    ignoreCache: true,
+//                    reload: true
+//                })
             },
             handlerFocus: function () {
                 let iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
