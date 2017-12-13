@@ -2,56 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba52eb6b-fb4b-42db-a94d-39d27530a8f0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/3.4 Courier search24nov.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/Location.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/can_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/css/app.9612df68085ab4c740a32433be53fcb0.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/css/app.9612df68085ab4c740a32433be53fcb0.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/dealers_marker.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/dealers_marker222.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue.ccad04d.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/Helvetica Neu Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeue BlackCond.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeue Light.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeue Medium.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeue Thin.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeue.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeueBd.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeueHv.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeueIt.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeueLt.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeue/HelveticaNeueMed.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/HelveticaNeueLt.bb5671e.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/fontawesome-webfont.674f50d.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/fontawesome-webfont.af7ae50.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/fontawesome-webfont.b06871f.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/fonts/fontawesome-webfont.fee66e7.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/get-button.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/header.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/header2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/img/fontawesome-webfont.912ec66.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/intro.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/iphoneX_.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.d695bf9bd43576051aca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/app.d695bf9bd43576051aca.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.367a30e774b5627e22e0.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/manifest.367a30e774b5627e22e0.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/vendor.33d0733369ba7d08f2cd.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/js/vendor.33d0733369ba7d08f2cd.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/logo_menu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/marker.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/marker2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/markerX2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/marker_transparent.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/menu_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/point.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/static/user_position_marker.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/registration/step_01.vue" afterPath="$PROJECT_DIR$/src/pages/registration/step_01.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/registration/step_01_no_anim.vue" afterPath="$PROJECT_DIR$/src/pages/registration/step_01_no_anim.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/registration/step_02.vue" afterPath="$PROJECT_DIR$/src/pages/registration/step_02.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/registration/step_02_no_anim.vue" afterPath="$PROJECT_DIR$/src/pages/registration/step_02_no_anim.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/registration/step_04.vue" afterPath="$PROJECT_DIR$/src/pages/registration/step_04.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/registration/step_04_no_anim.vue" afterPath="$PROJECT_DIR$/src/pages/registration/step_04_no_anim.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,11 +20,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="step_02.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="step_02.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/registration/step_02.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="66" lean-forward="false" selection-start-line="1" selection-start-column="66" selection-end-line="1" selection-end-column="66" />
+            <state relative-caret-position="85">
+              <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -89,8 +43,8 @@
       <file leaf-file-name="step_01.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/registration/step_01.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="66" lean-forward="false" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="66" />
+            <state relative-caret-position="160">
+              <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -131,8 +85,8 @@
       <file leaf-file-name="step_04.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/registration/step_04.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="66" lean-forward="false" selection-start-line="1" selection-start-column="66" selection-end-line="1" selection-end-column="66" />
+            <state relative-caret-position="306">
+              <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -158,7 +112,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="step_04_no_anim.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="step_04_no_anim.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/registration/step_04_no_anim.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -238,12 +192,12 @@
         <option value="$PROJECT_DIR$/src/pages/registration/methods.js" />
         <option value="$PROJECT_DIR$/src/app.vue" />
         <option value="$PROJECT_DIR$/src/routes.js" />
-        <option value="$PROJECT_DIR$/src/pages/registration/step_01.vue" />
         <option value="$PROJECT_DIR$/src/pages/registration/step_01_no_anim.vue" />
-        <option value="$PROJECT_DIR$/src/pages/registration/step_02.vue" />
         <option value="$PROJECT_DIR$/src/pages/registration/step_02_no_anim.vue" />
-        <option value="$PROJECT_DIR$/src/pages/registration/step_04.vue" />
         <option value="$PROJECT_DIR$/src/pages/registration/step_04_no_anim.vue" />
+        <option value="$PROJECT_DIR$/src/pages/registration/step_01.vue" />
+        <option value="$PROJECT_DIR$/src/pages/registration/step_02.vue" />
+        <option value="$PROJECT_DIR$/src/pages/registration/step_04.vue" />
       </list>
     </option>
   </component>
@@ -279,6 +233,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -393,7 +348,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -603,12 +557,13 @@
       <workItem from="1512909739846" duration="10327000" />
       <workItem from="1512969500420" duration="1593000" />
       <workItem from="1513019200732" duration="1637000" />
-      <workItem from="1513108882626" duration="3147000" />
+      <workItem from="1513108882626" duration="4344000" />
+      <workItem from="1513185221991" duration="180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161034000" />
+    <option name="totallyTimeSpent" value="162411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1370" height="744" extended-state="0" />
@@ -915,7 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -945,26 +899,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/registration/step_01.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="66" lean-forward="false" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/registration/step_01_no_anim.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/registration/step_02.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="66" lean-forward="false" selection-start-line="1" selection-start-column="66" selection-end-line="1" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -985,18 +923,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/registration/step_04.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="66" lean-forward="false" selection-start-line="1" selection-start-column="66" selection-end-line="1" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/registration/step_04_no_anim.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/registration/step_04.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/registration/step_01.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/registration/step_02.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
           <folding />
         </state>
       </provider>

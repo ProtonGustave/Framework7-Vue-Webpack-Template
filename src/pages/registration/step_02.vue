@@ -18,7 +18,6 @@
             </div>
             <div class="bottom">
                 <f7-button class="actions-modal-button" href="/signup_03/">NEXT</f7-button>
-                <f7-button class="actions-modal-button" href="/signup_02_no_anim/" :animate-pages="false">NO ANIM</f7-button>
             </div>
         </div>
     </f7-page>
