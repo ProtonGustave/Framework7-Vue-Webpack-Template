@@ -26,7 +26,6 @@
                         style="width: 100%; height: 100%"
                         :options="{disableDefaultUI: true}"
                         ref="map"
-                        @idle="onIdle"
                         @dragstart="handlerDragStart"
                         @dragend="handlerDragEnd"
                 >
@@ -49,7 +48,8 @@
             <div id="pin"></div>
             <f7-fab id="to-location-btn" class="shadow" @click="toLocation">
             </f7-fab>
-            <div id="delivery" :class="[{ fadeOut: isMapDragged  || loadingCouriers }, { fadeIn: !isMapDragged }, 'animated']">
+            <div id="delivery"
+                 :class="[{ fadeOut: isMapDragged  || loadingCouriers }, { fadeIn: !isMapDragged }, 'animated']">
                 <div id="estimate" class="shadow">
                     <div id="time"><span>
                                 <p id="timeVal">20</p>
@@ -69,171 +69,176 @@
 </template>
 
 <script>
-    import _ from 'lodash';
-    import Axios from 'axios'
+  import _ from 'lodash'
+  import Axios from 'axios'
+  import interactjs from 'interactjs'
 
-    export default {
-        created: async function () {
-            this.generateDeelersAround(this.$data.center);
-            this.$data.userMarker.position = await this.getUserPosition();
-            this.$data.center = this.$data.userMarker.position;
-        },
-        methods: {
-            handlerDragStart: function () {
-                this.$data.isMapDragged = true;
-                console.log('dragstart');
-            },
-            handlerDragEnd: function () {
-                this.$data.isMapDragged = false;
-                console.log('dragend');
-            },
-            toLocation: async function () {
-                console.log(this.$data.userMarker.position.lat, this.$data.userMarker.position.lng);
-                this.$refs.map.panTo(this.$data.userMarker.position);
-            },
-            getUserPosition: function () {
-                return new Promise((resolve, reject) => {
-                    if (navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition(function (position) {
-                            var pos = {
-                                lat: position.coords.latitude,
-                                lng: position.coords.longitude
-                            };
-                            resolve(pos);
-                        }, function () {
+  export default {
+    created: async function () {
+      this.generateDeelersAround(this.$data.center)
+      interactjs('#map').draggable({onmove: this.handlerMapMove, onend: this.handlerMapMoveEnd})
+      this.$data.userMarker.position = await this.getUserPosition()
+      this.$data.center = this.$data.userMarker.position
+    },
+    methods: {
+      handlerMapMoveEnd (evt) {
+        this.updateCenter(this.$refs.map.center)
+      },
+      handlerMapMove (evt) {
+        this.$refs.map.panBy(-evt.dx, -evt.dy)
+      },
+      handlerDragStart: function () {
+        this.$data.isMapDragged = true
+        console.log('dragstart')
+      },
+      handlerDragEnd: function () {
+        this.$data.isMapDragged = false
+        console.log('dragend')
+      },
+      toLocation: async function () {
+        console.log(this.$data.userMarker.position.lat, this.$data.userMarker.position.lng)
+        this.$refs.map.panTo(this.$data.userMarker.position)
+      },
+      getUserPosition: function () {
+        return new Promise((resolve, reject) => {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+              let pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+              }
+              resolve(pos)
+            }, function () {
 
-                            console.error(arguments);
-                            //handleLocationError(true, infoWindow, map.getCenter());
-                        });
-                    } else {
-                        console.error('Browser doesn\'t support Geolocation');
-                        // Browser doesn't support Geolocation
-                        //handleLocationError(false, infoWindow, map.getCenter());
-                    }
-                });
-            },
-            onIdle: function (component) {
-                this.updateCenter(component.$_map.center);
-            },
-            generateDeelersAround: async function (position) {
-                this.$data.markers = this.$data.markers.concat(this.generateDeelersAddresses(15, position));
-            },
-            generateDeelersAddresses: function (number, nearby) {
-                let res = [];
-                let distance = 0.003;
+              console.error(arguments)
+              //handleLocationError(true, infoWindow, map.getCenter());
+            })
+          } else {
+            console.error('Browser doesn\'t support Geolocation')
+            // Browser doesn't support Geolocation
+            //handleLocationError(false, infoWindow, map.getCenter());
+          }
+        })
+      },
+      generateDeelersAround: async function (position) {
+        this.$data.markers = this.$data.markers.concat(this.generateDeelersAddresses(15, position))
+      },
+      generateDeelersAddresses: function (number, nearby) {
+        let res = []
+        let distance = 0.003
 
-                for (let i = 0; i < number; i++) {
-                    let address = {position: {}};
-                    address.position.lat = _.random(nearby.lat - distance, nearby.lat + distance);
-                    address.position.lng = _.random(nearby.lng - distance, nearby.lng + distance);
-                    address.icon = this.$data.image;
-                    res.push(address);
-                }
-
-                return res;
-            },
-            updateCenter: _.debounce(async function (newCenter) {
-                this.$data.markers = [];
-                let addresses = await Axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
-                    params: {
-                        key: 'AIzaSyDksjLp8Pg0V2pGLKY5N6JIG4JrjwLaGYw',
-                        latlng: newCenter.lat() + ',' + newCenter.lng()
-                    }
-                });
-                this.generateDeelersAround({lat: newCenter.lat(), lng: newCenter.lng()});
-                this.$data.address = _.at(addresses, 'data.results[0].formatted_address');
-            }, 0),
-            whatEffect: function () {
-                let returned = this.$data.framework7.actions([
-                    {
-                        text: 'What effect would you like to get?',
-                        label: true,
-                    },
-                    {
-                        text: 'Get Hight',
-                    },
-                    {
-                        text: 'Relax & Pain Relif'
-                    },
-                    {
-                        text: 'Cancel',
-                        color: 'red'
-                    },
-                ]);
-
-                this.$data.$$(returned).on('click', function (event) {
-                    console.log(event.target.innerHTML);
-                    console.log(this);
-                    this.$data.loadingCouriers = true;
-                    setTimeout(function () {
-                        this.$data.loadingCouriers = false;
-                    }.bind(this), 5000);
-
-                }.bind(this));
-
-            },
-            getHigh: function () {
-                let returned = this.$data.framework7.actions([
-                    {
-                        text: 'What is your budget?',
-                        label: true,
-                    },
-                    {
-                        text: '$10',
-                    },
-                    {
-                        text: '$20'
-                    },
-                    {
-                        text: '$50'
-                    },
-                    {
-                        text: '$100 & up'
-                    },
-                    {
-                        text: 'Cancel',
-                        color: 'red'
-                    },
-                ]);
-                this.$data.$$(returned).on('click', function (event) {
-                    console.log(event.target.innerHTML);
-                    console.log(this);
-                    this.whatEffect();
-
-                }.bind(this));
-            },
+        for (let i = 0; i < number; i++) {
+          let address = {position: {}}
+          address.position.lat = _.random(nearby.lat - distance, nearby.lat + distance)
+          address.position.lng = _.random(nearby.lng - distance, nearby.lng + distance)
+          address.icon = this.$data.image
+          res.push(address)
         }
-        ,
-        data: function () {
-            return {
-                framework7: new Framework7(),
-                $$: Dom7,
-                isGuest: true,
-                step: 1,
-                loadingCouriers: false,
-                isMapDragged: false,
-                center: {lat: -34.397, lng: 150.644},
-                address: 'Where to ?',
-                userMarker: {
-                    position: {lat: -34.397, lng: 150.644},
-                    icon: {
-                        url: '/static/user_position_marker.png',
-                        size: {width: 468, height: 468},
-                        scaledSize: {width: 234, height: 234},
-                        origin: {x: 0, y: 0},
-                        anchor: {x: 117, y: 117}
-                    },
-                },
-                markers: [],
-                image: {
-                    url: '/static/dealers_marker.png',
-                    size: {width: 321, height: 321},
-                    scaledSize: {width: 100, height: 100},
-                    origin: {x: 0, y: 0},
-                    anchor: {x: 16, y: 32}
-                },
-            }
-        }
+
+        return res
+      },
+      updateCenter: async function (newCenter) {
+        this.$data.markers = []
+        let addresses = await Axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
+          params: {
+            key: 'AIzaSyDksjLp8Pg0V2pGLKY5N6JIG4JrjwLaGYw',
+            latlng: newCenter.lat + ',' + newCenter.lng
+          }
+        })
+        this.generateDeelersAround({lat: newCenter.lat, lng: newCenter.lng})
+        this.$data.address = _.at(addresses, 'data.results[0].formatted_address')
+      },
+      whatEffect: function () {
+        let returned = this.$data.framework7.actions([
+          {
+            text: 'What effect would you like to get?',
+            label: true,
+          },
+          {
+            text: 'Get Hight',
+          },
+          {
+            text: 'Relax & Pain Relif'
+          },
+          {
+            text: 'Cancel',
+            color: 'red'
+          },
+        ])
+
+        this.$data.$$(returned).on('click', function (event) {
+          console.log(event.target.innerHTML)
+          console.log(this)
+          this.$data.loadingCouriers = true
+          setTimeout(function () {
+            this.$data.loadingCouriers = false
+          }.bind(this), 5000)
+
+        }.bind(this))
+
+      },
+      getHigh: function () {
+        let returned = this.$data.framework7.actions([
+          {
+            text: 'What is your budget?',
+            label: true,
+          },
+          {
+            text: '$10',
+          },
+          {
+            text: '$20'
+          },
+          {
+            text: '$50'
+          },
+          {
+            text: '$100 & up'
+          },
+          {
+            text: 'Cancel',
+            color: 'red'
+          },
+        ])
+        this.$data.$$(returned).on('click', function (event) {
+          console.log(event.target.innerHTML)
+          console.log(this)
+          this.whatEffect()
+
+        }.bind(this))
+      },
     }
-    ;
+    ,
+    data: function () {
+      return {
+        framework7: new Framework7(),
+        $$: Dom7,
+        isGuest: true,
+        step: 1,
+        loadingCouriers: false,
+        isMapDragged: false,
+        center: {lat: -34.397, lng: 150.644},
+        address: 'Where to ?',
+        userMarker: {
+          position: {lat: -34.397, lng: 150.644},
+          icon: {
+            url: '/static/user_position_marker.png',
+            size: {width: 468, height: 468},
+            scaledSize: {width: 234, height: 234},
+            origin: {x: 0, y: 0},
+            anchor: {x: 117, y: 117}
+          },
+        },
+        markers: [],
+        image: {
+          url: '/static/dealers_marker.png',
+          size: {width: 321, height: 321},
+          scaledSize: {width: 100, height: 100},
+          origin: {x: 0, y: 0},
+          anchor: {x: 16, y: 32}
+        },
+      }
+    }
+  }
+
 </script>
