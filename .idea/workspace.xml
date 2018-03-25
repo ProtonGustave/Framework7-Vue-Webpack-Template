@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba52eb6b-fb4b-42db-a94d-39d27530a8f0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/map.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/map.vue" afterDir="false" />
-    </list>
+    <list default="true" id="ba52eb6b-fb4b-42db-a94d-39d27530a8f0" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -31,8 +26,8 @@
       <file leaf-file-name="map.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/map.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1955">
-              <caret line="101" column="21" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
+            <state relative-caret-position="152">
+              <caret line="239" column="7" lean-forward="true" selection-start-line="239" selection-start-column="7" selection-end-line="239" selection-end-column="7" />
               <folding>
                 <element signature="e#3163#3185#0" expanded="true" />
               </folding>
@@ -407,12 +402,12 @@
       <workItem from="1513019200732" duration="1637000" />
       <workItem from="1513108882626" duration="4344000" />
       <workItem from="1513185221991" duration="180000" />
-      <workItem from="1521981195085" duration="1920000" />
+      <workItem from="1521981195085" duration="3144000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164331000" />
+    <option name="totallyTimeSpent" value="165555000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1370" height="744" extended-state="0" />
@@ -705,8 +700,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/map.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1955">
-          <caret line="101" column="21" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
+        <state relative-caret-position="152">
+          <caret line="239" column="7" lean-forward="true" selection-start-line="239" selection-start-column="7" selection-end-line="239" selection-end-column="7" />
           <folding>
             <element signature="e#3163#3185#0" expanded="true" />
           </folding>
